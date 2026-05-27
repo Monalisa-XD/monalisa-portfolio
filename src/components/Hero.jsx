@@ -5,95 +5,113 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen bg-[#050816] overflow-hidden pt-32">
-      {/* Background Glow */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#00ffb3]/10 blur-[120px] rounded-full" />
+    <section className="relative min-h-screen overflow-hidden pt-28 bg-white dark:bg-[#050816] transition-colors duration-500">
+      {/* PREMIUM BACKGROUND GLOW */}
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-violet-600/20 blur-[140px] rounded-full" />
 
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-500/10 blur-[120px] rounded-full" />
+      <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-cyan-500/20 blur-[140px] rounded-full" />
 
-      {/* Grid Background */}
+      <div className="absolute top-[40%] left-[40%] w-[300px] h-[300px] bg-fuchsia-500/10 blur-[120px] rounded-full" />
+
+      {/* GRID */}
       <div
-        className="absolute inset-0 opacity-[0.08]"
+        className="absolute inset-0 opacity-[0.05] dark:opacity-[0.08]"
         style={{
           backgroundImage:
-            "linear-gradient(#00ffb3 1px, transparent 1px), linear-gradient(to right, #00ffb3 1px, transparent 1px)",
+            "linear-gradient(rgba(139,92,246,0.4) 1px, transparent 1px), linear-gradient(to right, rgba(139,92,246,0.4) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
         }}
       />
 
-      {/* Main Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 min-h-screen flex flex-col lg:flex-row items-center justify-between gap-20">
+      {/* MAIN CONTAINER */}
+      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-10 min-h-screen flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
         {/* LEFT CONTENT */}
-        <div className="flex-1">
-          {/* Tags */}
-          <div className="flex flex-wrap gap-3 mb-8">
-            {["Android (Java, Flutter)", "Full-Stack", "SQL"].map((item, index) => (
-              <span
-                key={index}
-                className="px-4 py-2 rounded-full border border-[#00ffb3]/30 text-[#00ffb3] text-sm bg-[#0B1224]/70 backdrop-blur-xl"
-              >
-                {item}
-              </span>
-            ))}
+        <div className="flex-1 text-center lg:text-left">
+          {/* TAGS */}
+          <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
+            {["Android (Java, Flutter)", "Full-Stack", "SQL"].map(
+              (item, index) => (
+                <span
+                  key={index}
+                  className="px-5 py-2 rounded-full border border-violet-500/20 bg-white/40 dark:bg-[#0B1224]/60 backdrop-blur-2xl text-violet-600 dark:text-violet-300 text-sm font-medium shadow-lg hover:scale-105 hover:border-violet-400 transition-all duration-300"
+                >
+                  {item}
+                </span>
+              ),
+            )}
           </div>
 
-          {/* Heading */}
-          <h2 className="text-5xl md:text-7xl font-black leading-tight text-white">
+          {/* HEADING */}
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-black dark:text-white">
             Hi, I'm
-            <span className="block mt-3 text-[#00ffb3] drop-shadow-[0_0_25px_rgba(0,255,179,0.7)]">
+            <span className="block mt-3 bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(139,92,246,0.45)]">
               Monalisa Jena
             </span>
           </h2>
 
-          {/* Roles */}
+          {/* ROLES */}
           <div className="mt-8 space-y-3">
-            <p className="text-pink-400 text-2xl font-semibold">
+            <p className="text-xl md:text-2xl font-semibold bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
               ↗ Android Developer
             </p>
 
-            <p className="text-yellow-400 text-2xl font-semibold">
-              ↗ Fullstack Developer
+            <p className="text-xl md:text-2xl font-semibold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+              ↗ Full Stack Developer
             </p>
 
-            <p className="text-cyan-400 text-2xl font-semibold">
+            <p className="text-xl md:text-2xl font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               ↗ UI Designer
             </p>
           </div>
 
-          {/* Description */}
-          <p className="mt-8 text-gray-400 text-lg leading-8 max-w-2xl">
-           Creative and detail-oriented 2026 MCA graduate with a passion for Android and Full Stack Development. Proficient in Java, Flutter, React, JavaScript, SQL, and modern frontend technologies, focused on building premium, responsive, and user-centric digital solutions.
+          {/* DESCRIPTION */}
+          <p className="mt-8 text-gray-600 dark:text-gray-400 text-base sm:text-lg leading-8 max-w-2xl mx-auto lg:mx-0">
+            Creative and detail-oriented 2026 MCA graduate with a passion for
+            Android and Full Stack Development. Proficient in Java, Flutter,
+            React, JavaScript, SQL, and modern frontend technologies, focused on
+            building premium, responsive, and user-centric digital solutions.
           </p>
 
-          {/* Status */}
-          <div className="mt-8 flex items-center gap-3">
-            <div className="w-3 h-3 rounded-full bg-[#00ffb3] shadow-[0_0_15px_#00ffb3]" />
+          {/* STATUS */}
+          <div className="mt-8 flex items-center justify-center lg:justify-start gap-3">
+            <div className="relative">
+              <div className="w-3 h-3 rounded-full bg-emerald-400" />
+              <div className="absolute inset-0 rounded-full bg-emerald-400 animate-ping" />
+            </div>
 
-            <p className="text-[#00ffb3] text-lg">
+            <p className="text-emerald-500 dark:text-emerald-400 text-lg font-medium">
               Available for internships & opportunities
             </p>
           </div>
 
-          {/* Buttons */}
-          <div className="mt-10 flex flex-wrap gap-5">
-            <button className="px-8 py-4 rounded-full bg-[#00ffb3] text-black font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_35px_rgba(0,255,179,0.5)]">
-              View Projects
+          {/* BUTTONS */}
+          <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-5">
+            {/* PROJECT BUTTON */}
+            <button className="group relative overflow-hidden px-8 py-4 rounded-full font-semibold text-white bg-gradient-to-r from-violet-600 via-fuchsia-500 to-cyan-400 shadow-[0_0_35px_rgba(139,92,246,0.35)] hover:scale-105 transition-all duration-500">
+              <span className="relative z-10">View Projects</span>
+
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-violet-600 opacity-0 group-hover:opacity-100 transition-all duration-500" />
             </button>
 
-            <button className="px-8 py-4 rounded-full border border-[#00ffb3] text-[#00ffb3] font-bold hover:bg-[#00ffb3] hover:text-black transition-all duration-300">
+            {/* RESUME BUTTON */}
+            <a
+              href={resumePDF}
+              download
+              className="group px-8 py-4 rounded-full border border-violet-500/20 bg-white/50 dark:bg-[#0B1224]/70 backdrop-blur-2xl text-black dark:text-white font-semibold hover:border-violet-400 hover:shadow-[0_0_25px_rgba(139,92,246,0.25)] hover:-translate-y-1 transition-all duration-500"
+            >
               Download Resume
-            </button>
+            </a>
           </div>
         </div>
 
         {/* RIGHT CONTENT */}
         <div className="flex-1 flex justify-center">
           <div className="relative">
-            {/* Glow */}
-            <div className="absolute inset-0 bg-[#00ffb3]/20 blur-[80px] rounded-full" />
+            {/* IMAGE GLOW */}
+            <div className="absolute inset-0 bg-gradient-to-r from-violet-600/30 via-fuchsia-500/20 to-cyan-400/20 blur-[100px] rounded-full" />
 
-            {/* Image Card */}
-            <div className="relative w-[340px] md:w-[420px] rounded-[40px] overflow-hidden border border-[#00ffb3]/20 bg-[#0B1224]/70 backdrop-blur-xl shadow-[0_0_40px_rgba(0,255,179,0.15)]">
+            {/* IMAGE CARD */}
+            <div className="relative w-[280px] sm:w-[340px] md:w-[420px] rounded-[40px] overflow-hidden border border-white/10 bg-white/10 dark:bg-[#0B1224]/70 backdrop-blur-2xl shadow-[0_20px_80px_rgba(139,92,246,0.2)] hover:-translate-y-3 transition-all duration-700">
               <img
                 src={profileImg}
                 alt="profile"
@@ -101,15 +119,20 @@ const Hero = () => {
               />
             </div>
 
-            {/* Open To Work */}
-            <div className="absolute bottom-5 right-0 bg-[#0B1224]/90 backdrop-blur-xl border border-[#00ffb3]/20 px-5 py-3 rounded-full flex items-center gap-3 shadow-[0_0_20px_rgba(0,255,179,0.1)]">
-              <div className="w-3 h-3 rounded-full bg-[#00ffb3]" />
+            {/* OPEN TO WORK */}
+            <div className="absolute bottom-5 right-0 bg-white/70 dark:bg-[#0B1224]/90 backdrop-blur-2xl border border-white/10 px-5 py-3 rounded-full flex items-center gap-3 shadow-xl">
+              <div className="relative">
+                <div className="w-3 h-3 rounded-full bg-emerald-400" />
+                <div className="absolute inset-0 rounded-full bg-emerald-400 animate-ping" />
+              </div>
 
-              <p className="text-[#00ffb3] font-medium">Open to Work</p>
+              <p className="text-emerald-500 dark:text-emerald-400 font-medium">
+                Open to Work
+              </p>
             </div>
 
-            {/* Stats */}
-            <div className="flex gap-5 mt-8 justify-center">
+            {/* STATS */}
+            <div className="flex gap-4 sm:gap-5 mt-8 justify-center flex-wrap">
               {[
                 { number: "10+", label: "Projects" },
                 { number: "5+", label: "Skills" },
@@ -117,25 +140,27 @@ const Hero = () => {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="w-32 h-32 rounded-3xl bg-[#0B1224]/70 border border-white/10 backdrop-blur-xl flex flex-col items-center justify-center"
+                  className="w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-white/50 dark:bg-[#0B1224]/70 border border-white/10 backdrop-blur-2xl flex flex-col items-center justify-center hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(139,92,246,0.2)] transition-all duration-500"
                 >
-                  <h3 className="text-4xl font-black text-[#00ffb3]">
+                  <h3 className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-violet-500 to-cyan-400 bg-clip-text text-transparent">
                     {item.number}
                   </h3>
 
-                  <p className="text-gray-400 mt-2">{item.label}</p>
+                  <p className="text-gray-600 dark:text-gray-400 mt-2 text-sm sm:text-base">
+                    {item.label}
+                  </p>
                 </div>
               ))}
             </div>
 
-            {/* Social Icons */}
+            {/* SOCIAL ICONS */}
             <div className="flex justify-center gap-5 mt-8">
               {[FaGithub, FaLinkedin, FaInstagram].map((Icon, index) => (
                 <div
                   key={index}
-                  className="w-14 h-14 rounded-2xl bg-[#0B1224]/80 border border-white/10 flex items-center justify-center text-white text-2xl hover:border-[#00ffb3] hover:text-[#00ffb3] transition-all duration-300 cursor-pointer"
+                  className="group w-14 h-14 rounded-2xl bg-white/50 dark:bg-[#0B1224]/80 border border-white/10 backdrop-blur-xl flex items-center justify-center text-black dark:text-white text-2xl hover:-translate-y-2 hover:border-violet-400 hover:shadow-[0_0_30px_rgba(139,92,246,0.25)] transition-all duration-500 cursor-pointer"
                 >
-                  <Icon />
+                  <Icon className="group-hover:text-violet-400 transition-all duration-500" />
                 </div>
               ))}
             </div>
