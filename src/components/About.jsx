@@ -1,203 +1,474 @@
+import {
+  FaMapMarkerAlt,
+  FaUniversity,
+  FaGraduationCap,
+  FaRocket,
+  FaGlobeAsia,
+} from "react-icons/fa";
 
-
+import {
+  MdLocationCity,
+} from "react-icons/md";
 
 const About = () => {
+
   const educationData = [
     {
       course: "Master of Computer Applications (MCA)",
+
       institution: "NIST University",
+
+      subInstitution: "Berhampur, Odisha",
+
       year: "2025 - Present",
-      percentage: "Pursuing",
-      description:
-        "Focused on software development, modern web technologies, and application development.",
-      gradient: "from-fuchsia-500 via-violet-500 to-cyan-500",
-      shadow: "hover:shadow-[0_20px_60px_rgba(217,70,239,0.25)]",
+
+      status: "Pursuing",
+
+      image: "/mca-college.jpg",
+
+      icon: <FaGraduationCap />,
+
+      gradient:
+        "from-cyan-400 via-blue-500 to-violet-500",
+
+      glow:
+        "hover:shadow-[0_20px_70px_rgba(34,211,238,0.28)]",
     },
 
     {
       course: "Bachelor of Computer Applications (BCA)",
-      institution: "NIST University",
+
+      institution: "Berhampur University",
+
+      subInstitution:
+        "Rajiv Memorial Institute of Technology",
+
       year: "2022 - 2025",
-      percentage: "8.5 CGPA",
-      description:
-        "Built strong foundation in programming, databases, and frontend development.",
-      gradient: "from-cyan-400 via-blue-500 to-violet-500",
-      shadow: "hover:shadow-[0_20px_60px_rgba(34,211,238,0.25)]",
-    },
 
-    {
-      course: "Intermediate",
-      institution: "XYZ Higher Secondary School",
-      year: "2020 - 2022",
-      percentage: "78%",
-      description:
-        "Completed higher secondary education with focus on analytical subjects.",
-      gradient: "from-pink-500 via-rose-500 to-orange-400",
-      shadow: "hover:shadow-[0_20px_60px_rgba(244,114,182,0.25)]",
-    },
+      status: "8.5 CGPA",
 
-    {
-      course: "School",
-      institution: "XYZ School",
-      year: "2019 - 2020",
-      percentage: "82%",
-      description:
-        "Completed school education while developing interest in technology.",
-      gradient: "from-emerald-400 via-cyan-400 to-blue-500",
-      shadow: "hover:shadow-[0_20px_60px_rgba(16,185,129,0.25)]",
+      image: "/bca-college.jpg",
+
+      icon: <FaUniversity />,
+
+      gradient:
+        "from-fuchsia-500 via-violet-500 to-cyan-500",
+
+      glow:
+        "hover:shadow-[0_20px_70px_rgba(217,70,239,0.28)]",
     },
   ];
 
   return (
     <section className="relative overflow-hidden bg-[#050816] py-24 sm:py-32">
-      {/* PREMIUM BACKGROUND */}
-      <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-violet-600/20 blur-[140px] rounded-full" />
 
-      <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-cyan-500/20 blur-[140px] rounded-full" />
+      {/* MULTI COLOR BACKGROUND */}
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-500/20 blur-[140px] rounded-full" />
 
-      <div className="absolute top-[35%] left-[40%] w-[280px] h-[280px] bg-fuchsia-500/10 blur-[120px] rounded-full" />
+      <div className="absolute top-[20%] right-0 w-[450px] h-[450px] bg-fuchsia-500/20 blur-[140px] rounded-full" />
+
+      <div className="absolute bottom-0 left-[35%] w-[450px] h-[450px] bg-violet-500/20 blur-[140px] rounded-full" />
+
+      <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-blue-500/20 blur-[140px] rounded-full" />
 
       {/* GRID */}
       <div
-        className="absolute inset-0 opacity-[0.05]"
+        className="absolute inset-0 opacity-[0.06]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(139,92,246,0.25) 1px, transparent 1px), linear-gradient(to right, rgba(139,92,246,0.25) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
+            "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px)",
+          backgroundSize: "70px 70px",
         }}
       />
 
       {/* MAIN */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-        {/* MAIN HEADING */}
-        <div className="text-center mb-20">
-          <p className="uppercase tracking-[6px] text-sm text-cyan-400 mb-4 font-medium">
-            Portfolio
-          </p>
 
-          <h2 className="text-4xl sm:text-6xl font-black bg-gradient-to-r from-fuchsia-500 via-violet-400 to-cyan-400 bg-clip-text text-transparent">
+        {/* HEADING */}
+        <div className="text-center mb-20">
+
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-500 bg-clip-text text-transparent">
+
             About Me
+
           </h2>
 
-          <div className="w-28 h-1 mx-auto mt-6 rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-500" />
+          <div className="w-40 h-[5px] mx-auto mt-8 rounded-full bg-gradient-to-r from-cyan-400 via-violet-500 to-fuchsia-500 shadow-[0_0_30px_rgba(139,92,246,0.5)]" />
+
         </div>
 
-        {/* WHO I AM BOX */}
-        <div className="relative overflow-hidden rounded-[35px] border border-white/10 bg-white/5 backdrop-blur-2xl p-8 sm:p-12 shadow-[0_20px_80px_rgba(139,92,246,0.15)] hover:shadow-[0_25px_90px_rgba(139,92,246,0.25)] transition-all duration-700 mb-14">
+        {/* WHO I AM */}
+        <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-3xl p-6 sm:p-10 lg:p-14 shadow-[0_25px_90px_rgba(139,92,246,0.18)] mb-16 group">
+
           {/* GLOW */}
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-transparent to-violet-500/10 opacity-40" />
+          <div className="absolute inset-0 opacity-60 bg-gradient-to-r from-cyan-500/10 via-violet-500/10 to-fuchsia-500/10" />
 
           {/* SHINE */}
-          <div className="absolute inset-0 -translate-x-full hover:translate-x-full transition-all duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-all duration-[1800ms] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-          <div className="relative z-10">
-            <h3 className="text-3xl sm:text-4xl font-black mb-8 bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-500 bg-clip-text text-transparent">
-              Who I Am
-            </h3>
+          <div className="relative z-10 grid lg:grid-cols-3 gap-10 items-start">
 
-            <p className="text-gray-300 text-sm sm:text-lg leading-8 sm:leading-9 max-w-5xl">
-              I am currently pursuing MCA and passionate about Android
-              Development, Full Stack Development, and building futuristic
-              digital experiences with premium user interfaces. I enjoy working
-              with React, Tailwind CSS, JavaScript, Java, Flutter, SQL, and
-              modern frontend technologies to create responsive and innovative
-              applications with modern design and smooth user experience.
-            </p>
+            {/* LEFT */}
+            <div className="lg:col-span-2">
+
+              <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 mb-8">
+
+                <FaGlobeAsia className="text-cyan-400" />
+
+                <p className="text-cyan-300 text-sm uppercase tracking-[4px]">
+                  Who I Am
+                </p>
+
+              </div>
+
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-500 bg-clip-text text-transparent mb-8">
+
+                Passionate Developer <br />
+                Building Premium Digital Experiences
+
+              </h3>
+
+              <p className="text-gray-300 text-base sm:text-lg leading-8 sm:leading-9">
+
+                I am currently pursuing MCA and passionate about
+                frontend development, React.js, UI/UX design, and
+                creating futuristic premium digital experiences.
+
+                <br /><br />
+
+                I enjoy building responsive and visually attractive
+                applications using React, Tailwind CSS, JavaScript,
+                Flutter, SQL, and modern web technologies with smooth
+                user experiences and modern aesthetics.
+
+                <br /><br />
+
+                My goal is to continuously improve my technical skills,
+                work on impactful real-world projects, and become a
+                skilled software developer building innovative products.
+
+              </p>
+
+            </div>
+
+            {/* RIGHT LOCATION BOX */}
+            <div className="relative">
+
+              <div className="absolute inset-0 rounded-[35px] bg-gradient-to-r from-cyan-500/20 via-violet-500/20 to-fuchsia-500/20 blur-2xl opacity-70" />
+
+              <div className="relative overflow-hidden rounded-[35px] border border-white/10 bg-[#0B1224]/80 backdrop-blur-2xl p-8 shadow-[0_0_50px_rgba(34,211,238,0.12)]">
+
+                <div className="absolute inset-0 opacity-40 bg-gradient-to-br from-cyan-500/10 via-transparent to-violet-500/10" />
+
+                <div className="relative z-10">
+
+                  <div className="flex items-center gap-3 mb-8">
+
+                    <div className="w-12 h-12 rounded-2xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-xl">
+
+                      <FaMapMarkerAlt />
+
+                    </div>
+
+                    <div>
+                      <h4 className="text-white text-2xl font-bold">
+                        Location
+                      </h4>
+
+                      <p className="text-gray-400 text-sm">
+                        Personal Information
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <div className="space-y-5">
+
+                    {[
+                      {
+                        label: "Country",
+                        value: "India",
+                        icon: <FaGlobeAsia />,
+                      },
+
+                      {
+                        label: "State",
+                        value: "Odisha",
+                        icon: <MdLocationCity />,
+                      },
+
+                      {
+                        label: "District",
+                        value: "Ganjam",
+                        icon: <FaMapMarkerAlt />,
+                      },
+
+                      {
+                        label: "Hometown",
+                        value: "Berhampur",
+                        icon: <FaMapMarkerAlt />,
+                      },
+                    ].map((item, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 hover:border-cyan-400/30 transition-all duration-300"
+                      >
+
+                        <div className="w-11 h-11 rounded-xl bg-cyan-400/10 flex items-center justify-center text-cyan-400">
+
+                          {item.icon}
+
+                        </div>
+
+                        <div>
+
+                          <p className="text-gray-400 text-xs uppercase tracking-[3px]">
+                            {item.label}
+                          </p>
+
+                          <h5 className="text-white font-semibold text-lg mt-1">
+                            {item.value}
+                          </h5>
+
+                        </div>
+
+                      </div>
+                    ))}
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
+
         </div>
 
-        {/* EDUCATION LARGE BOX */}
-        <div className="relative overflow-hidden rounded-[35px] border border-white/10 bg-white/5 backdrop-blur-2xl p-6 sm:p-10 shadow-[0_20px_80px_rgba(139,92,246,0.15)] mb-14">
+        {/* EDUCATION */}
+        <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-3xl p-6 sm:p-10 lg:p-14 shadow-[0_25px_90px_rgba(139,92,246,0.18)] mb-16">
+
           {/* GLOW */}
-          <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-500/10 via-transparent to-cyan-500/10 opacity-40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-500/10 via-violet-500/10 to-cyan-500/10 opacity-50" />
 
           <div className="relative z-10">
-            {/* HEADING */}
-            <h3 className="text-3xl sm:text-4xl font-black mb-10 bg-gradient-to-r from-fuchsia-500 via-violet-400 to-cyan-400 bg-clip-text text-transparent">
-              Education Details
-            </h3>
 
-            {/* EDUCATION GRID */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* TITLE */}
+            <div className="flex items-center gap-4 mb-12">
+
+              <div className="w-14 h-14 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400 text-2xl">
+
+                <FaGraduationCap />
+
+              </div>
+
+              <div>
+
+                <h3 className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-fuchsia-500 via-violet-400 to-cyan-400 bg-clip-text text-transparent">
+
+                  Education Details
+
+                </h3>
+
+                <p className="text-gray-400 mt-2">
+                  Academic Journey & Qualifications
+                </p>
+
+              </div>
+
+            </div>
+
+            {/* EDUCATION CARDS */}
+            <div className="space-y-8">
+
               {educationData.map((item, index) => (
                 <div
                   key={index}
-                  className={`group relative overflow-hidden rounded-[30px] border border-white/10 bg-[#0B1224]/70 backdrop-blur-2xl p-6 sm:p-8 transition-all duration-700 hover:-translate-y-2 ${item.shadow}`}
+                  className={`group relative overflow-hidden rounded-[35px] border border-white/10 bg-[#0B1224]/70 backdrop-blur-2xl p-6 sm:p-8 transition-all duration-700 hover:-translate-y-2 ${item.glow}`}
                 >
-                  {/* CARD GLOW */}
+
+                  {/* CARD LIGHT */}
                   <div
                     className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 bg-gradient-to-r ${item.gradient}/10`}
                   />
 
                   {/* SHINE */}
-                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-all duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-all duration-[1600ms] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-                  <div className="relative z-10 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6">
+                  {/* SIDE LIGHT */}
+                  <div
+                    className={`absolute left-0 top-0 h-full w-[6px] bg-gradient-to-b ${item.gradient}`}
+                  />
+
+                  <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+
                     {/* LEFT */}
-                    <div className="flex-1">
-                      {/* COURSE */}
-                      <h4
-                        className={`text-xl sm:text-2xl font-black bg-gradient-to-r ${item.gradient} bg-clip-text text-transparent leading-snug`}
+                    <div className="flex items-start gap-5">
+
+                      <div
+                        className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${item.gradient} flex items-center justify-center text-white text-2xl shadow-[0_0_30px_rgba(255,255,255,0.15)]`}
                       >
-                        {item.course}
-                      </h4>
 
-                      {/* INSTITUTION */}
-                      <p className="mt-4 text-lg sm:text-xl font-bold text-white tracking-wide">
-                        {item.institution}
-                      </p>
+                        {item.icon}
 
-                      {/* DESCRIPTION */}
-                      <p className="mt-4 text-gray-400 text-sm sm:text-base leading-7">
-                        {item.description}
-                      </p>
+                      </div>
+
+                      <div>
+
+                        <h4
+                          className={`text-2xl sm:text-3xl font-black bg-gradient-to-r ${item.gradient} bg-clip-text text-transparent`}
+                        >
+
+                          {item.course}
+
+                        </h4>
+
+                        <div className="mt-4">
+
+                          <p className="text-white text-lg sm:text-xl font-semibold">
+                            {item.institution}
+                          </p>
+
+                          <p className="text-gray-400 mt-2 text-sm sm:text-base">
+                            {item.subInstitution}
+                          </p>
+
+                        </div>
+
+                      </div>
+
                     </div>
 
                     {/* RIGHT */}
-                    <div className="sm:min-w-[140px]">
-                      <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-5 shadow-[0_0_30px_rgba(139,92,246,0.1)]">
-                        {/* YEAR */}
-                        <p className="text-cyan-400 font-bold text-sm sm:text-base">
-                          {item.year}
-                        </p>
+                    <div className="flex flex-col sm:flex-row gap-5">
 
-                        {/* PERCENTAGE */}
-                        <p className="mt-3 text-fuchsia-400 text-xl sm:text-2xl font-black">
-                          {item.percentage}
-                        </p>
+                      {/* COLLEGE IMAGE BOX */}
+                      <div className="group relative overflow-hidden rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-xl p-2 shadow-[0_0_40px_rgba(255,255,255,0.05)] w-[180px] h-[180px]">
+
+                        {/* GLOW */}
+                        <div
+                          className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 bg-gradient-to-br ${item.gradient}/20`}
+                        />
+
+                        {/* IMAGE */}
+                        <img
+                          src={item.image}
+                          alt="college"
+                          className="relative z-10 w-full h-full object-cover rounded-[22px] group-hover:scale-105 transition-all duration-700"
+                        />
+
                       </div>
+
+                      {/* YEAR + RESULT BOX */}
+                      <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-xl px-7 py-6 min-w-[180px] shadow-[0_0_40px_rgba(255,255,255,0.05)]">
+
+                        {/* LIGHT */}
+                        <div
+                          className={`absolute inset-0 opacity-20 bg-gradient-to-br ${item.gradient}`}
+                        />
+
+                        <div className="relative z-10">
+
+                          {/* YEAR */}
+                          <div className="mb-7">
+
+                            <p className="text-cyan-400 text-xs uppercase tracking-[4px] font-semibold">
+                              Passing Year
+                            </p>
+
+                            <h5 className="text-white text-xl font-bold mt-3">
+                              {item.year}
+                            </h5>
+
+                          </div>
+
+                          {/* DIVIDER */}
+                          <div className="w-full h-[1px] bg-white/10 mb-6" />
+
+                          {/* RESULT */}
+                          <div>
+
+                            <p className="text-fuchsia-400 text-xs uppercase tracking-[4px] font-semibold">
+                              Result
+                            </p>
+
+                            <h5 className="text-white text-2xl font-black mt-3">
+                              {item.status}
+                            </h5>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
                     </div>
+
                   </div>
+
                 </div>
               ))}
+
             </div>
+
           </div>
+
         </div>
 
-        {/* CAREER GOAL BOX */}
-        <div className="relative overflow-hidden rounded-[35px] border border-white/10 bg-white/5 backdrop-blur-2xl p-8 sm:p-12 shadow-[0_20px_80px_rgba(139,92,246,0.15)] hover:shadow-[0_25px_90px_rgba(139,92,246,0.25)] transition-all duration-700">
+        {/* CAREER GOAL */}
+        <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-3xl p-6 sm:p-10 lg:p-14 shadow-[0_25px_90px_rgba(34,211,238,0.15)] group">
+
           {/* GLOW */}
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-transparent to-fuchsia-500/10 opacity-40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-violet-500/10 to-fuchsia-500/10 opacity-50" />
 
           {/* SHINE */}
-          <div className="absolute inset-0 -translate-x-full hover:translate-x-full transition-all duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-all duration-[1800ms] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
           <div className="relative z-10">
-            <h3 className="text-3xl sm:text-4xl font-black mb-8 bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-500 bg-clip-text text-transparent">
-              Career Goal
-            </h3>
 
-            <p className="text-gray-300 text-sm sm:text-lg leading-8 sm:leading-9 max-w-5xl">
-              My goal is to become a professional software developer and build
-              impactful digital products with modern UI, premium user
-              experiences, and scalable solutions. I aspire to continuously
-              improve my technical skills, work on innovative real-world
-              projects, and contribute to the development of advanced web and
-              mobile applications.
+            <div className="flex items-center gap-4 mb-8">
+
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-400 to-violet-500 flex items-center justify-center text-white text-2xl shadow-[0_0_35px_rgba(34,211,238,0.25)]">
+
+                <FaRocket />
+
+              </div>
+
+              <div>
+
+                <h3 className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-500 bg-clip-text text-transparent">
+
+                  Career Goal
+
+                </h3>
+
+                <p className="text-gray-400 mt-2">
+                  Vision & Future Aspirations
+                </p>
+
+              </div>
+
+            </div>
+
+            <p className="text-gray-300 text-base sm:text-lg leading-8 sm:leading-9 max-w-5xl">
+
+              My goal is to become a professional software developer
+              and build impactful digital products with premium user
+              experiences and modern technologies. I aspire to work
+              on innovative real-world projects, continuously improve
+              my development skills, and contribute to scalable,
+              futuristic, and visually attractive applications.
+
             </p>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
   );
 };
