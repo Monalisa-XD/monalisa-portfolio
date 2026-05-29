@@ -143,7 +143,6 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Operating Systems",
-      icon: "💻",
       skills: [
         { name: "Windows", icon: <FaWindows /> },
         { name: "Linux", icon: <FaLinux /> },
@@ -152,7 +151,6 @@ const Skills = () => {
 
     {
       title: "Programming Languages",
-      icon: "☕",
       skills: [
         { name: "C", icon: <SiC /> },
         { name: "C++", icon: <SiCplusplus /> },
@@ -165,7 +163,7 @@ const Skills = () => {
 
     {
       title: "Web Technologies",
-      icon: "🌐",
+      
       skills: [
         { name: "HTML", icon: <FaHtml5 /> },
         { name: "CSS", icon: <FaCss3Alt /> },
@@ -176,7 +174,7 @@ const Skills = () => {
 
     {
       title: "Frameworks & Libraries",
-      icon: "⚛️",
+      
       skills: [
         { name: "React.js", icon: <SiReact /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss /> },
@@ -187,7 +185,7 @@ const Skills = () => {
 
     {
       title: "Tools & IDEs",
-      icon: "🛠️",
+    
       skills: [
       { name: "VS Code", icon: "💻" },
         { name: "Android Studio", icon: "📱" },
