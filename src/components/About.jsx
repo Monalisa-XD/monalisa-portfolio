@@ -15,16 +15,12 @@ const About = () => {
   const educationData = [
     {
       course: "Master of Computer Applications (MCA)",
-
       institution: "NIST University",
+      year: "2024 - 2026",
 
-      subInstitution: "Berhampur, Odisha",
+      status: "8.4 CGPA",
 
-      year: "2025 - Present",
-
-      status: "Pursuing",
-
-      image: "/mca-college.jpg",
+      // image: "/mca-college.jpg",
 
       icon: <FaGraduationCap />,
 
@@ -37,17 +33,14 @@ const About = () => {
 
     {
       course: "Bachelor of Computer Applications (BCA)",
-
       institution: "Berhampur University",
+      subInstitution: "Rajiv Memorial Institute of Technology",
 
-      subInstitution:
-        "Rajiv Memorial Institute of Technology",
+      year: "2021 - 2024",
 
-      year: "2022 - 2025",
+      status: "84%",
 
-      status: "8.5 CGPA",
-
-      image: "/bca-college.jpg",
+      // image: "/bca-college.jpg",
 
       icon: <FaUniversity />,
 
@@ -124,15 +117,13 @@ const About = () => {
               <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-500 bg-clip-text text-transparent mb-8">
 
                 Passionate Developer <br />
-                Building Premium Digital Experiences
+                Building Android and Web applications.
 
               </h3>
 
               <p className="text-gray-300 text-base sm:text-lg leading-8 sm:leading-9">
 
-                I am currently pursuing MCA and passionate about
-                frontend development, React.js, UI/UX design, and
-                creating futuristic premium digital experiences.
+                MCA graduate with a strong foundation in computer fundamentals and software development.
 
                 <br /><br />
 
