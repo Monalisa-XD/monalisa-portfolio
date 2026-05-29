@@ -89,8 +89,8 @@ const Footer = () => {
                   Monalisa Jena
                 </h2>
 
-                <p className="text-cyan-400 font-medium">
-                  MCA Student & Full Stack Developer
+                <p className="text-cyan-100 font-small">
+                  Android & Full Stack Developer
                 </p>
 
                 <div className="mt-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20">
@@ -155,10 +155,9 @@ const Footer = () => {
             <div className="space-y-5">
 
               <div className="flex items-center gap-4 text-gray-300">
+                <FaEnvelope className="text-red-500 text-xl" />
 
-                <FaEnvelope className="text-cyan-400" />
-
-                <span>yourmail@gmail.com</span>
+                <span>monalishaj975@gmail.com</span>
 
               </div>
 
@@ -172,7 +171,7 @@ const Footer = () => {
 
               <div className="flex items-center gap-4 text-gray-300">
 
-                <FaMapMarkerAlt className="text-cyan-400" />
+                <FaMapMarkerAlt className="text-red-400 text-xl" />
 
                 <span>Berhampur, Odisha, India</span>
 
