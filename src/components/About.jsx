@@ -4,462 +4,369 @@ import {
   FaGraduationCap,
   FaRocket,
   FaGlobeAsia,
+  FaMedal,
+  FaCalendarAlt,
 } from "react-icons/fa";
-
-import {
-  MdLocationCity,
-} from "react-icons/md";
+import { MdLocationCity } from "react-icons/md";
 
 const About = () => {
-
   const educationData = [
     {
-      course: "Master of Computer Applications (MCA)",
+      course: "Master of Computer Applications",
+      short: "MCA",
       institution: "NIST University",
-      year: "2024 - 2026",
-
+      year: "2024 – 2026",
       status: "8.4 CGPA",
-
-      // image: "/mca-college.jpg",
-
+      rank: "Ongoing",
       icon: <FaGraduationCap />,
-
-      gradient:
-        "from-cyan-400 via-blue-500 to-violet-500",
-
-      glow:
-        "hover:shadow-[0_20px_70px_rgba(34,211,238,0.28)]",
+      accent: "#22d3ee",
+      gradient: "from-cyan-400 via-blue-500 to-violet-500",
+      glow: "rgba(34,211,238,0.22)",
     },
-
     {
-      course: "Bachelor of Computer Applications (BCA)",
+      course: "Bachelor of Computer Applications",
+      short: "BCA",
       institution: "Berhampur University",
       subInstitution: "Rajiv Memorial Institute of Technology",
-
-      year: "2021 - 2024",
-
+      year: "2021 – 2024",
       status: "84%",
-
-      // image: "/bca-college.jpg",
-
+      rank: "First Class",
       icon: <FaUniversity />,
-
-      gradient:
-        "from-fuchsia-500 via-violet-500 to-cyan-500",
-
-      glow:
-        "hover:shadow-[0_20px_70px_rgba(217,70,239,0.28)]",
+      accent: "#d946ef",
+      gradient: "from-fuchsia-500 via-violet-500 to-cyan-500",
+      glow: "rgba(217,70,239,0.22)",
     },
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#050816] py-24 sm:py-32">
+    <section
+      className="relative overflow-hidden bg-[#020617] py-28 sm:py-36"
+      style={{ fontFamily: "'Syne', 'Inter', sans-serif" }}
+    >
+      {/* AURORA BACKGROUND */}
+<div className="absolute inset-0 overflow-hidden pointer-events-none">
 
-      {/* MULTI COLOR BACKGROUND */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-500/20 blur-[140px] rounded-full" />
+  <div className="absolute -top-[20%] -left-[10%] w-[900px] h-[900px] bg-cyan-500/15 rounded-full blur-[220px] animate-pulse" />
 
-      <div className="absolute top-[20%] right-0 w-[450px] h-[450px] bg-fuchsia-500/20 blur-[140px] rounded-full" />
+  <div className="absolute top-[20%] -right-[10%] w-[850px] h-[850px] bg-fuchsia-500/15 rounded-full blur-[220px] animate-pulse" />
 
-      <div className="absolute bottom-0 left-[35%] w-[450px] h-[450px] bg-violet-500/20 blur-[140px] rounded-full" />
+  <div className="absolute bottom-[-15%] left-[20%] w-[900px] h-[900px] bg-violet-500/15 rounded-full blur-[220px] animate-pulse" />
 
-      <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-blue-500/20 blur-[140px] rounded-full" />
+</div>
+      {/* ── AMBIENT ORBS ── */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-cyan-500/10 blur-[160px]" />
+        <div className="absolute top-[30%] -right-40 w-[500px] h-[500px] rounded-full bg-fuchsia-500/10 blur-[160px]" />
+        <div className="absolute bottom-0 left-[30%] w-[500px] h-[500px] rounded-full bg-violet-500/10 blur-[160px]" />
+      </div>
 
-      {/* GRID */}
+      {/* ── DOT GRID ── */}
       <div
-        className="absolute inset-0 opacity-[0.06]"
+        className="pointer-events-none absolute inset-0 opacity-[0.035]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px)",
-          backgroundSize: "70px 70px",
+            "radial-gradient(rgba(255,255,255,0.7) 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
         }}
       />
 
-      {/* MAIN */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-
+      {/* ── MAIN ── */}
+      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         {/* HEADING */}
-        <div className="text-center mb-20">
-
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-500 bg-clip-text text-transparent">
-
-            About Me
-
-          </h2>
-
-          <div className="w-40 h-[5px] mx-auto mt-8 rounded-full bg-gradient-to-r from-cyan-400 via-violet-500 to-fuchsia-500 shadow-[0_0_30px_rgba(139,92,246,0.5)]" />
-
+        <div className="text-center mb-24">
+          <h2
+  className="
+  text-6xl
+  sm:text-7xl
+  lg:text-8xl
+  font-black
+  leading-none
+  tracking-tight
+  bg-gradient-to-r
+  from-blue-400
+  via-cyan-400
+  to-fuchsia-500
+  bg-clip-text
+  text-transparent
+  drop-shadow-[0_0_35px_rgba(34,211,238,0.35)]
+  "
+>
+  About Me
+</h2>
+          <div className="flex items-center justify-center gap-3 mt-8">
+            <div className="h-px w-16 bg-gradient-to-r from-transparent to-cyan-400/60" />
+            <div className="w-2 h-2 rounded-full bg-cyan-400" />
+            <div className="h-px w-16 bg-gradient-to-l from-transparent to-cyan-400/60" />
+          </div>
         </div>
 
-        {/* WHO I AM */}
-        <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-3xl p-6 sm:p-10 lg:p-14 shadow-[0_25px_90px_rgba(139,92,246,0.18)] mb-16 group">
+        {/* ── WHO I AM ── */}
+        <div className="relative overflow-hidden rounded-[32px] border border-white/[0.07] bg-white/[0.03] backdrop-blur-2xl p-8 sm:p-12 lg:p-16 mb-10 group">
+          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-all duration-[2000ms] bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />
+          <div className="absolute top-0 left-12 right-12 h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent" />
 
-          {/* GLOW */}
-          <div className="absolute inset-0 opacity-60 bg-gradient-to-r from-cyan-500/10 via-violet-500/10 to-fuchsia-500/10" />
-
-          {/* SHINE */}
-          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-all duration-[1800ms] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-          <div className="relative z-10 grid lg:grid-cols-3 gap-10 items-start">
-
-            {/* LEFT */}
-            <div className="lg:col-span-2">
-
-              <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 mb-8">
-
-                <FaGlobeAsia className="text-cyan-400" />
-
-                <p className="text-cyan-300 text-sm uppercase tracking-[4px]">
+          <div className="relative z-10 grid lg:grid-cols-5 gap-12 items-start">
+            {/* TEXT — 3 cols */}
+            <div className="lg:col-span-3">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-400/20 bg-cyan-400/5 mb-8">
+                <FaGlobeAsia className="text-cyan-400 text-xs" />
+                <span className="text-cyan-300 text-[11px] uppercase tracking-[4px]">
                   Who I Am
-                </p>
-
+                </span>
               </div>
 
-              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-500 bg-clip-text text-transparent mb-8">
-
-                Passionate Developer <br />
-                Building Android and Web applications.
-
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-[1.15] text-white mb-8">
+                Passionate Developer
+                <br />
+                <span className="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
+                  Building Android &amp; Web
+                </span>
               </h3>
 
-              <p className="text-gray-300 text-base sm:text-lg leading-8 sm:leading-9">
-
-                MCA graduate with a strong foundation in computer fundamentals and software development.
-
-                <br /><br />
-
-                I enjoy building responsive and visually attractive
-                applications using React, Tailwind CSS, JavaScript,
-                Flutter, SQL, and modern web technologies with smooth
-                user experiences and modern aesthetics.
-
-                <br /><br />
-
-                My goal is to continuously improve my technical skills,
-                work on impactful real-world projects, and become a
-                skilled software developer building innovative products.
-
-              </p>
-
+              <div className="space-y-5 text-gray-400 text-base sm:text-[17px] leading-8">
+                <p>
+                  MCA graduate with a strong foundation in computer fundamentals
+                  and software development.
+                </p>
+                <p>
+                  I enjoy building responsive and visually attractive
+                  applications using{" "}
+                  <span className="text-white font-medium">
+                    React, Tailwind CSS, JavaScript, Flutter, SQL
+                  </span>
+                  , and modern web technologies with smooth user experiences and
+                  modern aesthetics.
+                </p>
+                <p>
+                  My goal is to continuously improve my technical skills, work
+                  on impactful real-world projects, and become a skilled
+                  software developer building innovative products.
+                </p>
+              </div>
             </div>
 
-            {/* RIGHT LOCATION BOX */}
-            <div className="relative">
-
-              <div className="absolute inset-0 rounded-[35px] bg-gradient-to-r from-cyan-500/20 via-violet-500/20 to-fuchsia-500/20 blur-2xl opacity-70" />
-
-              <div className="relative overflow-hidden rounded-[35px] border border-white/10 bg-[#0B1224]/80 backdrop-blur-2xl p-8 shadow-[0_0_50px_rgba(34,211,238,0.12)]">
-
-                <div className="absolute inset-0 opacity-40 bg-gradient-to-br from-cyan-500/10 via-transparent to-violet-500/10" />
-
-                <div className="relative z-10">
-
-                  <div className="flex items-center gap-3 mb-8">
-
-                    <div className="w-12 h-12 rounded-2xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-xl">
-
-                      <FaMapMarkerAlt />
-
-                    </div>
-
-                    <div>
-                      <h4 className="text-white text-2xl font-bold">
-                        Location
-                      </h4>
-
-                      <p className="text-gray-400 text-sm">
-                        Personal Information
-                      </p>
-                    </div>
-
+            {/* LOCATION — 2 cols */}
+            <div className="lg:col-span-2">
+              <div className="rounded-[28px] border border-white/[0.07] bg-[#080f1f]/80 overflow-hidden">
+                <div className="px-7 py-5 border-b border-white/[0.07] flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-cyan-400/10 flex items-center justify-center text-cyan-400">
+                    <FaMapMarkerAlt className="text-sm" />
                   </div>
-
-                  <div className="space-y-5">
-
-                    {[
-                      {
-                        label: "Country",
-                        value: "India",
-                        icon: <FaGlobeAsia />,
-                      },
-
-                      {
-                        label: "State",
-                        value: "Odisha",
-                        icon: <MdLocationCity />,
-                      },
-
-                      {
-                        label: "District",
-                        value: "Ganjam",
-                        icon: <FaMapMarkerAlt />,
-                      },
-
-                      {
-                        label: "Hometown",
-                        value: "Berhampur",
-                        icon: <FaMapMarkerAlt />,
-                      },
-                    ].map((item, index) => (
-                      <div
-                        key={index}
-                        className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 hover:border-cyan-400/30 transition-all duration-300"
-                      >
-
-                        <div className="w-11 h-11 rounded-xl bg-cyan-400/10 flex items-center justify-center text-cyan-400">
-
-                          {item.icon}
-
-                        </div>
-
-                        <div>
-
-                          <p className="text-gray-400 text-xs uppercase tracking-[3px]">
-                            {item.label}
-                          </p>
-
-                          <h5 className="text-white font-semibold text-lg mt-1">
-                            {item.value}
-                          </h5>
-
-                        </div>
-
-                      </div>
-                    ))}
-
+                  <div>
+                    <p className="text-white font-bold text-base">Location</p>
+                    <p className="text-gray-500 text-xs">
+                      Personal Information
+                    </p>
                   </div>
-
                 </div>
 
+                <div className="p-5 space-y-3">
+                  {[
+                    { label: "Country", value: "India", icon: <FaGlobeAsia /> },
+                    {
+                      label: "State",
+                      value: "Odisha",
+                      icon: <MdLocationCity />,
+                    },
+                    {
+                      label: "District",
+                      value: "Ganjam",
+                      icon: <FaMapMarkerAlt />,
+                    },
+                    {
+                      label: "Hometown",
+                      value: "Berhampur",
+                      icon: <FaMapMarkerAlt />,
+                    },
+                  ].map((item, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center justify-between px-5 py-4 rounded-2xl border border-white/[0.06] bg-white/[0.03] hover:border-cyan-400/20 hover:bg-cyan-400/[0.04] transition-all duration-300 group/row"
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="text-cyan-400/60 group-hover/row:text-cyan-400 transition-colors text-sm">
+                          {item.icon}
+                        </span>
+                        <p className="text-gray-500 text-xs uppercase tracking-[3px]">
+                          {item.label}
+                        </p>
+                      </div>
+                      <p className="text-white font-semibold text-sm">
+                        {item.value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
-
             </div>
-
           </div>
-
         </div>
 
-        {/* EDUCATION */}
-        <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-3xl p-6 sm:p-10 lg:p-14 shadow-[0_25px_90px_rgba(139,92,246,0.18)] mb-16">
-
-          {/* GLOW */}
-          <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-500/10 via-violet-500/10 to-cyan-500/10 opacity-50" />
+        {/* ── EDUCATION ── */}
+        <div className="relative overflow-hidden rounded-[32px] border border-white/[0.07] bg-white/[0.03] backdrop-blur-2xl p-8 sm:p-12 lg:p-16 mb-10">
+          <div className="absolute top-0 left-12 right-12 h-px bg-gradient-to-r from-transparent via-violet-400/40 to-transparent" />
 
           <div className="relative z-10">
-
-            {/* TITLE */}
-            <div className="flex items-center gap-4 mb-12">
-
-              <div className="w-14 h-14 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400 text-2xl">
-
+            <div className="flex items-center gap-4 mb-14">
+              <div className="w-12 h-12 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400 text-xl">
                 <FaGraduationCap />
-
               </div>
-
               <div>
-
-                <h3 className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-fuchsia-500 via-violet-400 to-cyan-400 bg-clip-text text-transparent">
-
-                  Education Details
-
+                <h3 className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
+                  Education
                 </h3>
-
-                <p className="text-gray-400 mt-2">
-                  Academic Journey & Qualifications
+                <p className="text-gray-500 text-sm mt-1">
+                  Academic Journey &amp; Qualifications
                 </p>
-
               </div>
-
             </div>
 
-            {/* EDUCATION CARDS */}
-            <div className="space-y-8">
-
+            <div className="space-y-6">
               {educationData.map((item, index) => (
                 <div
                   key={index}
-                  className={`group relative overflow-hidden rounded-[35px] border border-white/10 bg-[#0B1224]/70 backdrop-blur-2xl p-6 sm:p-8 transition-all duration-700 hover:-translate-y-2 ${item.glow}`}
+                  className="group relative overflow-hidden rounded-[28px] border border-white/[0.07] bg-[#080f1f]/70 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1"
+                  style={{
+                    boxShadow: `0 0 0 0 ${item.glow}`,
+                    transition: "box-shadow 0.4s, transform 0.4s",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.boxShadow = `0 20px 60px ${item.glow}`)
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.boxShadow = `0 0 0 0 ${item.glow}`)
+                  }
                 >
-
-                  {/* CARD LIGHT */}
                   <div
-                    className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 bg-gradient-to-r ${item.gradient}/10`}
+                    className={`absolute left-0 top-0 h-full w-1 bg-gradient-to-b ${item.gradient}`}
                   />
+                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-all duration-[1500ms] bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />
 
-                  {/* SHINE */}
-                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-all duration-[1600ms] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-                  {/* SIDE LIGHT */}
-                  <div
-                    className={`absolute left-0 top-0 h-full w-[6px] bg-gradient-to-b ${item.gradient}`}
-                  />
-
-                  <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-
+                  <div className="relative z-10 p-7 sm:p-9 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
                     {/* LEFT */}
-                    <div className="flex items-start gap-5">
-
-                      <div
-                        className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${item.gradient} flex items-center justify-center text-white text-2xl shadow-[0_0_30px_rgba(255,255,255,0.15)]`}
-                      >
-
-                        {item.icon}
-
+                    <div className="flex items-start gap-6">
+                      <div className="shrink-0">
+                        <div
+                          className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.gradient} flex items-center justify-center text-white text-xl shadow-lg`}
+                        >
+                          {item.icon}
+                        </div>
+                        <div className="mt-3 text-center">
+                          <span
+                            className={`text-[11px] font-black bg-gradient-to-r ${item.gradient} bg-clip-text text-transparent tracking-[2px]`}
+                          >
+                            {item.short}
+                          </span>
+                        </div>
                       </div>
 
                       <div>
-
-                        <h4
-                          className={`text-2xl sm:text-3xl font-black bg-gradient-to-r ${item.gradient} bg-clip-text text-transparent`}
-                        >
-
+                        <h4 className="text-xl sm:text-2xl font-black text-white leading-tight">
                           {item.course}
-
                         </h4>
-
-                        <div className="mt-4">
-
-                          <p className="text-white text-lg sm:text-xl font-semibold">
-                            {item.institution}
-                          </p>
-
-                          <p className="text-gray-400 mt-2 text-sm sm:text-base">
+                        <p className="text-gray-300 font-semibold mt-2 text-base">
+                          {item.institution}
+                        </p>
+                        {item.subInstitution && (
+                          <p className="text-gray-500 text-sm mt-1">
                             {item.subInstitution}
                           </p>
-
-                        </div>
-
+                        )}
                       </div>
-
                     </div>
 
-                    {/* RIGHT */}
-                    <div className="flex flex-col sm:flex-row gap-5">
-
-                      {/* COLLEGE IMAGE BOX */}
-                      <div className="group relative overflow-hidden rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-xl p-2 shadow-[0_0_40px_rgba(255,255,255,0.05)] w-[180px] h-[180px]">
-
-                        {/* GLOW */}
-                        <div
-                          className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 bg-gradient-to-br ${item.gradient}/20`}
-                        />
-
-                        {/* IMAGE */}
-                        <img
-                          src={item.image}
-                          alt="college"
-                          className="relative z-10 w-full h-full object-cover rounded-[22px] group-hover:scale-105 transition-all duration-700"
-                        />
-
-                      </div>
-
-                      {/* YEAR + RESULT BOX */}
-                      <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-xl px-7 py-6 min-w-[180px] shadow-[0_0_40px_rgba(255,255,255,0.05)]">
-
-                        {/* LIGHT */}
-                        <div
-                          className={`absolute inset-0 opacity-20 bg-gradient-to-br ${item.gradient}`}
-                        />
-
-                        <div className="relative z-10">
-
-                          {/* YEAR */}
-                          <div className="mb-7">
-
-                            <p className="text-cyan-400 text-xs uppercase tracking-[4px] font-semibold">
-                              Passing Year
-                            </p>
-
-                            <h5 className="text-white text-xl font-bold mt-3">
-                              {item.year}
-                            </h5>
-
-                          </div>
-
-                          {/* DIVIDER */}
-                          <div className="w-full h-[1px] bg-white/10 mb-6" />
-
-                          {/* RESULT */}
-                          <div>
-
-                            <p className="text-fuchsia-400 text-xs uppercase tracking-[4px] font-semibold">
-                              Result
-                            </p>
-
-                            <h5 className="text-white text-2xl font-black mt-3">
-                              {item.status}
-                            </h5>
-
-                          </div>
-
+                    {/* RIGHT — stat tiles */}
+                    <div className="flex gap-4 shrink-0">
+                      <div className="relative overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.04] px-6 py-5 min-w-[130px]">
+                        <div className="flex items-center gap-2 mb-2">
+                          <FaCalendarAlt className="text-cyan-400/70 text-xs" />
+                          <p className="text-cyan-400 text-[10px] uppercase tracking-[3px] font-semibold">
+                            Period
+                          </p>
                         </div>
-
+                        <p className="text-white text-base font-bold">
+                          {item.year}
+                        </p>
                       </div>
 
+                      <div className="relative overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.04] px-6 py-5 min-w-[130px]">
+                        <div className="flex items-center gap-2 mb-2">
+                          <FaMedal className="text-fuchsia-400/70 text-xs" />
+                          <p className="text-fuchsia-400 text-[10px] uppercase tracking-[3px] font-semibold">
+                            Result
+                          </p>
+                        </div>
+                        <p
+                          className={`text-2xl font-black bg-gradient-to-r ${item.gradient} bg-clip-text text-transparent`}
+                        >
+                          {item.status}
+                        </p>
+                        <p className="text-gray-500 text-xs mt-1">
+                          {item.rank}
+                        </p>
+                      </div>
                     </div>
-
                   </div>
-
                 </div>
               ))}
-
             </div>
-
           </div>
-
         </div>
 
-        {/* CAREER GOAL */}
-        <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-3xl p-6 sm:p-10 lg:p-14 shadow-[0_25px_90px_rgba(34,211,238,0.15)] group">
+        {/* ── CAREER GOAL ── */}
+        <div className="relative overflow-hidden rounded-[32px] border border-white/[0.07] bg-gradient-to-br
+from-white/[0.08]
+via-white/[0.04]
+to-transparent backdrop-blur-2xl p-8 sm:p-12 lg:p-16 group">
+          <div className="absolute top-0 left-12 right-12 h-px bg-gradient-to-r from-transparent via-fuchsia-400/40 to-transparent" />
+          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-all duration-[2000ms] bg-gradient-to-r from-transparent via-white/[0.03] to-transparent" />
 
-          {/* GLOW */}
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-violet-500/10 to-fuchsia-500/10 opacity-50" />
-
-          {/* SHINE */}
-          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-all duration-[1800ms] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-          <div className="relative z-10">
-
-            <div className="flex items-center gap-4 mb-8">
-
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-400 to-violet-500 flex items-center justify-center text-white text-2xl shadow-[0_0_35px_rgba(34,211,238,0.25)]">
-
+          <div className="relative z-10 flex flex-col lg:flex-row lg:items-start gap-10">
+            <div className="shrink-0">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-400 to-violet-500 flex items-center justify-center text-white text-2xl shadow-[0_0_40px_rgba(34,211,238,0.2)]">
                 <FaRocket />
-
               </div>
-
-              <div>
-
-                <h3 className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-500 bg-clip-text text-transparent">
-
-                  Career Goal
-
-                </h3>
-
-                <p className="text-gray-400 mt-2">
-                  Vision & Future Aspirations
-                </p>
-
-              </div>
-
             </div>
 
-            <p className="text-gray-300 text-base sm:text-lg leading-8 sm:leading-9 max-w-5xl">
+            <div>
+              <h3 className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-500 bg-clip-text text-transparent mb-2">
+                Career Goal
+              </h3>
+              <p className="text-gray-500 text-sm mb-7">
+                Vision &amp; Future Aspirations
+              </p>
 
-              My goal is to become a professional software developer
-              and build impactful digital products with premium user
-              experiences and modern technologies. I aspire to work
-              on innovative real-world projects, continuously improve
-              my development skills, and contribute to scalable,
-              futuristic, and visually attractive applications.
+              <p className="text-gray-300 text-base sm:text-[17px] leading-8 sm:leading-9 max-w-4xl">
+                My goal is to become a professional software developer and build
+                impactful digital products with{" "}
+                <span className="text-white font-medium">
+                  premium user experiences
+                </span>{" "}
+                and modern technologies. I aspire to work on innovative
+                real-world projects, continuously improve my development skills,
+                and contribute to scalable, futuristic, and visually attractive
+                applications.
+              </p>
 
-            </p>
-
+              <div className="flex flex-wrap gap-3 mt-8">
+                {[
+                  "Software Development",
+                  "Modern UI/UX",
+                  "Scalable Products",
+                  "Innovation",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-4 py-1.5 rounded-full text-xs border border-white/[0.08] bg-white/[0.04] text-gray-400 uppercase tracking-[2px]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 };
