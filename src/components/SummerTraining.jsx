@@ -51,7 +51,7 @@ const SummerTraining = () => {
             Summer Training
           </h2>
 
-          <p className="mt-5 text-gray-400 text-lg">
+          <p className="mt-5 text-gray-500 text-lg">
             Hands-on Learning & Practical Development
           </p>
 

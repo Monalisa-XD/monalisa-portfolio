@@ -16,8 +16,7 @@ const About = () => {
       short: "MCA",
       institution: "NIST University",
       year: "2024 – 2026",
-      status: "8.4 CGPA",
-      rank: "Ongoing",
+      status: "8.5 CGPA",
       icon: <FaGraduationCap />,
       accent: "#22d3ee",
       gradient: "from-cyan-400 via-blue-500 to-violet-500",
@@ -29,9 +28,8 @@ const About = () => {
       institution: "Berhampur University",
       subInstitution: "Rajiv Memorial Institute of Technology",
       year: "2021 – 2024",
-      status: "84%",
-      rank: "First Class",
-      icon: <FaUniversity />,
+      status: "84 %",
+      icon: <FaGraduationCap />,
       accent: "#d946ef",
       gradient: "from-fuchsia-500 via-violet-500 to-cyan-500",
       glow: "rgba(217,70,239,0.22)",
@@ -209,7 +207,7 @@ const About = () => {
           <div className="relative z-10">
             <div className="flex items-center gap-4 mb-14">
               <div className="w-12 h-12 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400 text-xl">
-                <FaGraduationCap />
+                <FaUniversity />
               </div>
               <div>
                 <h3 className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
