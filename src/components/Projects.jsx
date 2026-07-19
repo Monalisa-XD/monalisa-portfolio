@@ -3,7 +3,7 @@ const Projects = () => {
     {
       title: "Portfolio",
       description:
-        "A premium futuristic portfolio website built using React JS and Tailwind CSS with responsive design and smooth UI effects.",
+        "Developed a dynamic personal portfolio website showcasing projects, technical skills, and achievements with a clean UI and responsive design.",
 
       tech: ["React", "Tailwind", "JavaScript"],
 
@@ -21,21 +21,21 @@ const Projects = () => {
     },
 
     {
-      title: "Scientific Calculator",
+      title: "ecommerce-website",
       description:
-        "A modern scientific calculator application with advanced functions and responsive UI.",
+        "Built a responsive full-stack e-commerce website with a modern and user-friendly interface.",
 
-      tech: ["Android", "Java", "XML"],
+      tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
 
-      github: "#",
+      github: "https://github.com/Monalisa-XD/ecommerce-website.git",
     },
 
     {
-      title: "Company Visit Manager",
+      title: "Academix",
       description:
-        "A management app to store and display company visit details using SQLite database and ListView.",
+        "Developed a student and faculty management system to manage records, roles, and academic data through a secure and user-friendly platform. ",
 
-      tech: ["Android", "SQLite", "Java"],
+      tech: ["HTML", "CSS", "SQLite", "Java"],
 
       github: "#",
     },
@@ -101,13 +101,13 @@ const Projects = () => {
                   GitHub
                 </a>
 
-                <a
+                {/* <a
                   href={project.live}
                   target="_blank"
                   className="px-6 py-3 rounded-full bg-[#00ffb3] text-black font-semibold hover:scale-105 transition-all duration-300 shadow-[0_0_25px_rgba(0,255,179,0.4)]"
                 >
                   Live Demo
-                </a>
+                </a> */}
               </div>
             </div>
           ))}
