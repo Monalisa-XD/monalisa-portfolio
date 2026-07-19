@@ -1,25 +1,23 @@
 const Projects = () => {
   const projects = [
     {
-      title: "Developer Portfolio",
+      title: "Portfolio",
       description:
         "A premium futuristic portfolio website built using React JS and Tailwind CSS with responsive design and smooth UI effects.",
 
       tech: ["React", "Tailwind", "JavaScript"],
 
       github: "#",
-      live: "#",
     },
 
     {
-      title: "Learnify App",
+      title: "Career-AI",
       description:
         "An Android learning application with authentication, internships, courses, and Firebase integration.",
 
-      tech: ["Android", "Firebase", "Kotlin"],
+      tech: ["Flutter", "Dart", "Kotlin"],
 
-      github: "#",
-      live: "#",
+      github: "https://github.com/Monalisa-XD/career_ai.git",
     },
 
     {
@@ -30,7 +28,6 @@ const Projects = () => {
       tech: ["Android", "Java", "XML"],
 
       github: "#",
-      live: "#",
     },
 
     {
@@ -41,22 +38,18 @@ const Projects = () => {
       tech: ["Android", "SQLite", "Java"],
 
       github: "#",
-      live: "#",
     },
   ];
 
   return (
     <section className="relative py-32 bg-[#050816] overflow-hidden">
-
       {/* Background Glow */}
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-cyan-500/10 blur-[120px] rounded-full" />
 
       {/* Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
-
         {/* Heading */}
         <div className="mb-20">
-
           <p className="text-[#00ffb3] uppercase tracking-[6px] text-sm mb-4">
             My Work
           </p>
@@ -64,38 +57,30 @@ const Projects = () => {
           <h2 className="text-5xl md:text-6xl font-black text-white">
             Featured Projects
           </h2>
-
         </div>
 
         {/* Project Grid */}
         <div className="grid md:grid-cols-2 gap-10">
-
           {projects.map((project, index) => (
             <div
               key={index}
               className="group bg-[#0B1224]/70 border border-white/10 rounded-[35px] p-8 backdrop-blur-xl hover:border-[#00ffb3]/30 transition-all duration-500 hover:-translate-y-2 shadow-[0_0_30px_rgba(0,255,179,0.05)]"
             >
-
               {/* Top Glow Line */}
               <div className="w-20 h-1 bg-[#00ffb3] rounded-full mb-8 shadow-[0_0_15px_#00ffb3]" />
 
               {/* Project Title */}
               <h3 className="text-3xl font-bold text-white mb-5 group-hover:text-[#00ffb3] transition-all duration-300">
-
                 {project.title}
-
               </h3>
 
               {/* Description */}
               <p className="text-gray-400 leading-8 mb-8">
-
                 {project.description}
-
               </p>
 
               {/* Tech Stack */}
               <div className="flex flex-wrap gap-4 mb-10">
-
                 {project.tech.map((item, i) => (
                   <span
                     key={i}
@@ -104,12 +89,10 @@ const Projects = () => {
                     {item}
                   </span>
                 ))}
-
               </div>
 
               {/* Buttons */}
               <div className="flex gap-5">
-
                 <a
                   href={project.github}
                   target="_blank"
@@ -125,12 +108,9 @@ const Projects = () => {
                 >
                   Live Demo
                 </a>
-
               </div>
-
             </div>
           ))}
-
         </div>
       </div>
     </section>
