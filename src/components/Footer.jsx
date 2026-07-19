@@ -26,15 +26,11 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: <FaGithub />,
-      link: "YOUR_GITHUB",
+      link: "https://github.com/Monalisa-XD",
     },
     {
       icon: <FaLinkedin />,
-      link: "YOUR_LINKEDIN",
-    },
-    {
-      icon: <FaInstagram />,
-      link: "YOUR_INSTAGRAM",
+      link: "https://www.linkedin.com/in/monalisa--jena",
     },
   ];
 
@@ -109,10 +105,7 @@ const Footer = () => {
 
             <p className="text-gray-400 leading-8 mt-8">
 
-              Passionate MCA student focused on creating modern,
-              responsive and premium digital experiences using
-              React, JavaScript, Tailwind CSS, Flutter, SQL
-              and modern technologies.
+             MCA graduate with a strong interest in Software Development, Flutter, Android (Java), Full-Stack Development, and Computer Networking. Passionate about developing efficient, user-centric applications and providing exceptional customer support through strong communication and technical problem-solving skills.
 
             </p>
 
@@ -165,7 +158,7 @@ const Footer = () => {
 
                 <FaPhoneAlt className="text-cyan-400" />
 
-                <span>+91 XXXXX XXXXX</span>
+                <span>+91 7846941199</span>
 
               </div>
 
@@ -212,11 +205,6 @@ const Footer = () => {
 
             </p>
 
-            <p className="text-gray-500 text-sm text-center">
-
-              Designed & Developed with ❤️ using React & Tailwind CSS
-
-            </p>
 
             <a
               href="#home"
