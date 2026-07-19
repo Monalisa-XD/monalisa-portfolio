@@ -133,7 +133,7 @@ const Skills = () => {
                   {category.skills.map((skill, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-[#050816] border border-white/10 text-gray-300 hover:border-cyan-400/40 hover:text-cyan-400 transition-all duration-300 cursor-pointer"
+                      className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-[#050816] border border-white/10 text-gray-300 hover:border-cyan-400/40 hover:text-cyan-400 transition-all duration-300"
                     >
                       <span className="text-lg">{skill.icon}</span>
                       <span>{skill.name}</span>

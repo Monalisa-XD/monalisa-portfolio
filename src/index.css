@@ -1,10 +1,148 @@
 @import "tailwindcss";
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   background-color: #050816;
   overflow-x: hidden;
+}
+
+/* --- cinematic transitions for theme switching --- */
+body,
+section,
+footer,
+main,
+nav,
+.bg-white\/5,
+.bg-\[\#0B1224\]\/70,
+.bg-\[\#0B1224\]\/50,
+.bg-\[\#080f1f\]\/80,
+.bg-\[\#080f1f\]\/70,
+.bg-\[\#050816\],
+.text-white,
+h1, h2, h3, h4, h5, h6,
+p, span,
+input, textarea,
+.border-white\/10,
+.border-white\/5,
+.border-white\/\[0\.07\] {
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- LIGHT THEME RULES --- */
+html:not(.dark) {
+  --bg-primary: #f5f7fb;
+  --bg-secondary: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: rgba(15, 23, 42, 0.08);
+  --card-bg: rgba(255, 255, 255, 0.85);
+}
+
+/* Global body & app background override */
+html:not(.dark) body,
+html:not(.dark) .bg-\[\#050816\],
+html:not(.dark) section.bg-\[\#050816\],
+html:not(.dark) footer.bg-\[\#050816\] {
+  background-color: var(--bg-primary) !important;
+}
+
+html:not(.dark) .bg-\[\#020617\],
+html:not(.dark) section.bg-\[\#020617\] {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Cards & translucent wrappers */
+html:not(.dark) .bg-white\/5,
+html:not(.dark) .bg-\[\#0B1224\]\/70,
+html:not(.dark) .bg-\[\#0B1224\]\/50,
+html:not(.dark) .bg-\[\#080f1f\]\/80,
+html:not(.dark) .bg-\[\#080f1f\]\/70,
+html:not(.dark) .bg-white\/10 {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.04) !important;
+}
+
+/* Text overrides */
+html:not(.dark) .text-white:not(.bg-gradient-to-r):not(button):not(a.bg-gradient-to-r):not(.group-hover\:text-white) {
+  color: var(--text-primary) !important;
+}
+
+html:not(.dark) .text-gray-300,
+html:not(.dark) .text-gray-400,
+html:not(.dark) .text-cyan-100 {
+  color: var(--text-secondary) !important;
+}
+
+html:not(.dark) .text-gray-500 {
+  color: #64748b !important;
+}
+
+/* Input elements styling */
+html:not(.dark) input,
+html:not(.dark) textarea {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+html:not(.dark) input::placeholder,
+html:not(.dark) textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Border overrides */
+html:not(.dark) .border-white\/10,
+html:not(.dark) .border-white\/5,
+html:not(.dark) .border-white\/\[0\.07\],
+html:not(.dark) .border-l-2.border-white\/10 {
+  border-color: var(--border-color) !important;
+}
+
+/* Background grid styling adaptations */
+html:not(.dark) div[style*="radial-gradient(rgba(255,255,255,0.7)"] {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.12) 1px, transparent 1px) !important;
+  opacity: 0.25 !important;
+}
+
+html:not(.dark) div[style*="linear-gradient(rgba(255,255,255,0.15)"] {
+  background-image: linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+                    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px) !important;
+  opacity: 0.25 !important;
+}
+
+html:not(.dark) footer[style*="linear-gradient(rgba(255,255,255,0.15)"] {
+  background-image: linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+                    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px) !important;
+  opacity: 0.25 !important;
+}
+
+/* Quick links footer hover text */
+html:not(.dark) footer a:hover {
+  color: #22d3ee !important;
+}
+
+/* Resume and custom button override to ensure they remain readable */
+html:not(.dark) .bg-gradient-to-r text-white {
+  color: #ffffff !important;
+}
+
+/* --- CURSOR RULES --- */
+a,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"],
+select,
+summary,
+[role="button"],
+.cursor-pointer {
+  cursor: pointer;
 }
