@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { HiBars3, HiXMark, HiMoon, HiSun } from "react-icons/hi2";
+import profileImage from "../assets/profile.png.jpeg";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,6 +21,38 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Intersection Observer to update active state based on visible section
+  useEffect(() => {
+    const sections = ["home", "about", "skills", "projects", "contact"];
+    
+    const observerOptions = {
+      root: null,
+      rootMargin: "-40% 0px -50% 0px", // Trigger when section is in the upper middle part of viewport
+      threshold: 0,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          const linkName = id.charAt(0).toUpperCase() + id.slice(1);
+          setActive(linkName);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sections.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   // Theme Toggle
@@ -44,13 +77,17 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-20 flex items-center justify-between">
         {/* LOGO */}
-        <div className="flex items-center gap-3 cursor-pointer group">
+        <a
+          href="#home"
+          onClick={() => setActive("Home")}
+          className="flex items-center gap-3 cursor-pointer group"
+        >
           {/* Profile Image */}
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-violet-600 via-fuchsia-500 to-cyan-400 blur-md opacity-70 group-hover:opacity-100 transition duration-500" />
 
             <img
-              src="/profile.jpg"
+              src={profileImage}
               alt="profile"
               className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-white/20"
             />
@@ -60,26 +97,28 @@ const Navbar = () => {
           <h1 className="text-base sm:text-lg font-bold tracking-wide text-black dark:text-white">
             Monalisa Jena
           </h1>
-        </div>
+        </a>
 
         {/* DESKTOP MENU */}
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link, index) => (
-            <li
-              key={index}
-              onClick={() => setActive(link)}
-              className={`relative text-sm font-medium cursor-pointer transition-all duration-300
-              ${
-                active === link
-                  ? "text-violet-500"
-                  : "text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
-              }`}
-            >
-              {link}
+            <li key={index}>
+              <a
+                href={`#${link.toLowerCase()}`}
+                onClick={() => setActive(link)}
+                className={`relative text-sm font-medium cursor-pointer transition-all duration-300 block
+                ${
+                  active === link
+                    ? "text-violet-500"
+                    : "text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                }`}
+              >
+                {link}
 
-              {active === link && (
-                <span className="absolute left-0 -bottom-2 w-full h-[2px] rounded-full bg-gradient-to-r from-violet-500 to-cyan-400" />
-              )}
+                {active === link && (
+                  <span className="absolute left-0 -bottom-2 w-full h-[2px] rounded-full bg-gradient-to-r from-violet-500 to-cyan-400" />
+                )}
+              </a>
             </li>
           ))}
         </ul>
@@ -140,20 +179,22 @@ const Navbar = () => {
         <div className="mx-4 mb-4 rounded-3xl bg-white dark:bg-[#0B1224] backdrop-blur-2xl border border-black/10 dark:border-white/10 p-6 shadow-xl">
           <ul className="flex flex-col gap-6">
             {navLinks.map((link, index) => (
-              <li
-                key={index}
-                onClick={() => {
-                  setActive(link);
-                  setMenuOpen(false);
-                }}
-                className={`text-base font-medium transition-all duration-300 cursor-pointer
-                ${
-                  active === link
-                    ? "text-violet-500"
-                    : "text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
-                }`}
-              >
-                {link}
+              <li key={index}>
+                <a
+                  href={`#${link.toLowerCase()}`}
+                  onClick={() => {
+                    setActive(link);
+                    setMenuOpen(false);
+                  }}
+                  className={`text-base font-medium transition-all duration-300 cursor-pointer block
+                  ${
+                    active === link
+                      ? "text-violet-500"
+                      : "text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                  }`}
+                >
+                  {link}
+                </a>
               </li>
             ))}
           </ul>
