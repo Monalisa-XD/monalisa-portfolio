@@ -302,7 +302,9 @@ const Contact = () => {
 
               {/* LinkedIn */}
               <a
-                href="#"
+                href="https://www.linkedin.com/in/monalisa--jena"
+                target="_blank"
+                rel="noreferrer"
                 className="group flex items-center gap-5 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-3xl p-6 hover:-translate-y-2 hover:border-cyan-400/40 hover:shadow-[0_20px_60px_rgba(34,211,238,0.2)] transition-all duration-500"
               >
                 <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-2xl">
@@ -320,7 +322,9 @@ const Contact = () => {
 
               {/* GitHub */}
               <a
-                href="#"
+                href="https://github.com/Monalisa-XD"
+                target="_blank"
+                rel="noreferrer"
                 className="group flex items-center gap-5 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-3xl p-6 hover:-translate-y-2 hover:border-violet-400/40 hover:shadow-[0_20px_60px_rgba(139,92,246,0.2)] transition-all duration-500"
               >
                 <div className="w-14 h-14 rounded-2xl bg-violet-500/10 flex items-center justify-center text-violet-400 text-2xl">

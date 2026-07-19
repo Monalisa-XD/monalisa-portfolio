@@ -159,22 +159,30 @@ const Hero = () => {
               {/* BUTTONS */}
               <div className="mt-10 flex flex-wrap gap-4 justify-center lg:justify-start">
                 {/* PROJECT BUTTON */}
-                <button className="group relative overflow-hidden px-6 sm:px-8 py-4 rounded-full text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-500 shadow-[0_0_45px_rgba(139,92,246,0.35)] hover:scale-105 hover:-translate-y-1 transition-all duration-500 flex items-center gap-3">
+                <a
+                  href="#projects"
+                  className="group relative overflow-hidden px-6 sm:px-8 py-4 rounded-full text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-500 shadow-[0_0_45px_rgba(139,92,246,0.35)] hover:scale-105 hover:-translate-y-1 transition-all duration-500 flex items-center gap-3"
+                >
                   <FaBriefcase />
 
                   <span className="relative z-10">My Projects</span>
 
                   <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-all duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-                </button>
+                </a>
 
                 {/* CONNECT */}
-                <button className="group relative overflow-hidden px-6 sm:px-8 py-4 rounded-full border border-violet-500/20 bg-white/10 backdrop-blur-2xl text-sm sm:text-base text-white font-semibold hover:scale-105 hover:-translate-y-1 hover:border-violet-400 transition-all duration-500 flex items-center gap-3">
+                <a
+                  href="https://www.linkedin.com/in/monalisa--jena"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group relative overflow-hidden px-6 sm:px-8 py-4 rounded-full border border-violet-500/20 bg-white/10 backdrop-blur-2xl text-sm sm:text-base text-white font-semibold hover:scale-105 hover:-translate-y-1 hover:border-violet-400 transition-all duration-500 flex items-center gap-3"
+                >
                   <FaUser />
 
                   <span className="relative z-10">Let's Connect</span>
 
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-r from-indigo-500 via-violet-500 to-cyan-500" />
-                </button>
+                </a>
 
                 {/* DOWNLOAD */}
                 <a
@@ -214,7 +222,9 @@ const Hero = () => {
               <div className="flex justify-center gap-4 mt-8 flex-wrap">
                 {/* GITHUB */}
                 <a
-                  href="#"
+                  href="https://github.com/Monalisa-XD"
+                  target="_blank"
+                  rel="noreferrer"
                   className="group w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl flex items-center justify-center text-[#f5f5f5] text-xl hover:-translate-y-3 hover:rotate-6 hover:shadow-[0_0_35px_rgba(255,255,255,0.25)] transition-all duration-500"
                 >
                   <FaGithub />
@@ -222,7 +232,9 @@ const Hero = () => {
 
                 {/* LINKEDIN */}
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/monalisa--jena"
+                  target="_blank"
+                  rel="noreferrer"
                   className="group w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl flex items-center justify-center text-[#0A66C2] text-xl hover:-translate-y-3 hover:rotate-6 hover:shadow-[0_0_35px_rgba(10,102,194,0.45)] transition-all duration-500"
                 >
                   <FaLinkedin />
@@ -230,7 +242,7 @@ const Hero = () => {
 
                 {/* EMAIL */}
                 <a
-                  href="#"
+                  href="mailto:monalishaj975@gmail.com"
                   className="group w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl flex items-center justify-center hover:-translate-y-3 hover:rotate-6 hover:shadow-[0_0_35px_rgba(234,67,53,0.4)] transition-all duration-500"
                 >
                   <MdEmail className="text-[#EA4335] text-xl" />
