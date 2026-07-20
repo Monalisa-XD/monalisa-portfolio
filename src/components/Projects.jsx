@@ -23,9 +23,28 @@ const Projects = () => {
     {
       title: "Tiny-ML Powered Edge Fault Detection in Wireless Sensor Network",
       description:
-        "Developed a machine learning-based fault detection system for sensor data analysis and prediction in wireless sensor networks. ",
+        "Designed and implemented a machine learning solution for fault detection in Wireless Sensor Networks by analyzing sensor data, training predictive models, and visualizing performance metrics. Focused on accurate fault classification through data preprocessing and model evaluation.",
 
-      tech: ["Python", "ML", "Model Training & Testing", "Data Analysis", "Data Visualization", "Graph Analysis"],
+      tech: [ "Python",
+    "Machine Learning",
+    "Scikit-learn",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Data Analysis",
+    "Data Preprocessing",
+    "Model Training & Evaluation",
+    "Data Visualization",  "Logistic Regression", "Decision Tree", "Random Forest", "Support Vector Machine (SVM)"],
+      colab: "https://colab.research.google.com/drive/1-Eok2U5SwC_v8T8XcFYZFzoAv2Oh_y43?usp=sharing",
+    },
+
+    {
+      title: "Student Placement Prediction",
+      description:
+        "Student Placement Prediction is a Machine Learning project that predicts whether a student is likely to be placed based on their academic performance, technical skills, aptitude scores, communication skills, internship experience, and other relevant factors. The system analyzes historical student data, trains a classification model, and provides placement predictions to help students identify areas for improvement and assist training and placement cells in making data-driven decisions. ",
+
+      tech: ["Python", "ML", "Scikit-learn", "Data Analysis", "Pandas", "NumPy", "Matplotlib", "google Colab", "Student Placement Dataset (Kaggle)", "Logistic Regression", "Decision Tree", "Random Forest", "Support Vector Machine (SVM)"],
+      colab: "https://colab.research.google.com/drive/1rBYLRpIPc0vmShpejIDJZokfi4fD8V5o?usp=sharing",
     },
 
 
