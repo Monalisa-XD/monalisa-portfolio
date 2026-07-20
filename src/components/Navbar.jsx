@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { HiBars3, HiXMark, HiMoon, HiSun } from "react-icons/hi2";
 import profileImage from "../assets/profile.png.jpeg";
+import Resume from "../assets/resume.pdf";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -81,11 +82,11 @@ const Navbar = () => {
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-violet-600 via-fuchsia-500 to-cyan-400 blur-md opacity-70 group-hover:opacity-100 transition duration-500" />
 
-            <img
+            {/* <img
               src={profileImage}
               alt="profile"
               className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-white/20"
-            />
+            /> */}
           </div>
 
           {/* Name */}
@@ -122,8 +123,10 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-4">
           {/* Resume */}
           <a
-            href="/resume.pdf"
-            download
+            href={Resume}
+            download = "resume.pdf"
+            target = "_blank"
+            rel= "noopener noreferrer"
             className="px-6 py-2.5 rounded-full bg-gradient-to-r from-violet-600 via-fuchsia-400 to-cyan-500 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(168,85,247,0.45)]"
           >
             Resume

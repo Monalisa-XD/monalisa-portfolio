@@ -19,6 +19,15 @@ const Projects = () => {
 
       github: "https://github.com/Monalisa-XD/career_ai.git",
     },
+    
+    {
+      title: "Tiny-ML Powered Edge Fault Detection in Wireless Sensor Network",
+      description:
+        "Developed a machine learning-based fault detection system for sensor data analysis and prediction in wireless sensor networks. ",
+
+      tech: ["Python", "ML", "Model Training & Testing", "Data Analysis", "Data Visualization", "Graph Analysis"],
+    },
+
 
     {
       title: "ecommerce-website",
