@@ -3,19 +3,19 @@ const Projects = () => {
     {
       title: "Portfolio",
       description:
-        "Developed a dynamic personal portfolio website showcasing projects, technical skills, and achievements with a clean UI and responsive design.",
+         "Designed and developed a modern, responsive personal portfolio website to showcase projects, technical skills, certifications, and achievements. Built with React and Tailwind CSS, featuring a clean UI, smooth animations, and an intuitive user experience.",
 
       tech: ["React", "Tailwind", "JavaScript"],
 
-      github: "#",
+      github: "https://github.com/Monalisa-XD/monalisa-portfolio.git",
     },
 
     {
       title: "Career-AI",
       description:
-        "An Android learning application with authentication, internships, courses, and Firebase integration.",
+        "Built an AI-powered career guidance application featuring ATS Resume Analysis, AI Mock Interviews, Resume Builder, Career Roadmaps, AI Cover Letter Generator, Job Recommendations, and an interactive analytics dashboard with a responsive Flutter UI.",
 
-      tech: ["Flutter", "Dart", "Kotlin"],
+      tech: ["Flutter", "Dart", "Firebase", "REST API Integration", "Glassmorphism UI"],
 
       github: "https://github.com/Monalisa-XD/career_ai.git",
     },
@@ -31,8 +31,6 @@ const Projects = () => {
     "Pandas",
     "NumPy",
     "Matplotlib",
-    "Data Analysis",
-    "Data Preprocessing",
     "Model Training & Evaluation",
     "Data Visualization",  "Logistic Regression", "Decision Tree", "Random Forest", "Support Vector Machine (SVM)"],
       colab: "https://colab.research.google.com/drive/1-Eok2U5SwC_v8T8XcFYZFzoAv2Oh_y43?usp=sharing",
@@ -63,9 +61,9 @@ const Projects = () => {
       description:
         "Developed a student and faculty management system to manage records, roles, and academic data through a secure and user-friendly platform. ",
 
-      tech: ["HTML", "CSS", "SQLite", "Java"],
+      tech: ["HTML", "CSS", "MySql", "Java"],
 
-      github: "#",
+      github: "https://github.com/Monalisa-XD/student-faculty-management-backend.git",
     },
   ];
 
@@ -119,24 +117,29 @@ const Projects = () => {
                 ))}
               </div>
 
-              {/* Buttons */}
-              <div className="flex gap-5">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  className="px-6 py-3 rounded-full border border-[#00ffb3] text-[#00ffb3] font-semibold hover:bg-[#00ffb3] hover:text-black transition-all duration-300"
-                >
-                  GitHub
-                </a>
+   <div className="flex gap-5">
+  {project.github && (
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-6 py-3 rounded-full border border-[#00ffb3] text-[#00ffb3] font-semibold hover:bg-[#00ffb3] hover:text-black transition-all duration-300"
+    >
+      GitHub
+    </a>
+  )}
 
-                {/* <a
-                  href={project.live}
-                  target="_blank"
-                  className="px-6 py-3 rounded-full bg-[#00ffb3] text-black font-semibold hover:scale-105 transition-all duration-300 shadow-[0_0_25px_rgba(0,255,179,0.4)]"
-                >
-                  Live Demo
-                </a> */}
-              </div>
+  {project.colab && (
+    <a
+      href={project.colab}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-6 py-3 rounded-full border border-blue-500 text-blue-400 font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
+    >
+      Google Colab
+    </a>
+  )}
+</div>
             </div>
           ))}
         </div>
