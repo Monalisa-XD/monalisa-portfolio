@@ -75,7 +75,7 @@ const Hero = () => {
               {/* HEADING */}
               <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black leading-tight text-white">
                 Hi, I'm
-                <span className="block mt-3 bg-gradient-to-r from-fuchsia-500 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(139,92,246,0.5)]">
+                <span className="block mt-3 bg-gradient-to-r from-[#C94BFF] to-[#7B8CFF] bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(201,75,255,0.5)]">
                   Monalisa Jena
                 </span>
               </h2>
@@ -172,9 +172,7 @@ const Hero = () => {
 
                 {/* CONNECT */}
                 <a
-                  href="https://www.linkedin.com/in/monalisa--jena"
-                  target="_blank"
-                  rel="noreferrer"
+                  href="#contact"
                   className="group relative overflow-hidden px-6 sm:px-8 py-4 rounded-full border border-violet-500/20 bg-white/10 backdrop-blur-2xl text-sm sm:text-base text-white font-semibold hover:scale-105 hover:-translate-y-1 hover:border-violet-400 transition-all duration-500 flex items-center gap-3"
                 >
                   <FaUser />
@@ -186,7 +184,7 @@ const Hero = () => {
 
                 {/* DOWNLOAD */}
                 <a
-                  href={resumePDF}
+                  href="/resume.pdf"
                   download
                   className="group relative overflow-hidden px-6 sm:px-8 py-4 rounded-full border border-violet-500/20 bg-white/10 backdrop-blur-2xl text-sm sm:text-base text-white font-semibold hover:scale-105 hover:-translate-y-1 hover:border-violet-400 transition-all duration-500 flex items-center gap-3"
                 >
@@ -219,13 +217,13 @@ const Hero = () => {
               </div>
 
               {/* SOCIAL ICONS */}
-              <div className="flex justify-center gap-4 mt-8 flex-wrap">
+              <div className="flex justify-center gap-6 mt-8 flex-wrap">
                 {/* GITHUB */}
                 <a
                   href="https://github.com/Monalisa-XD"
                   target="_blank"
                   rel="noreferrer"
-                  className="group w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl flex items-center justify-center text-[#f5f5f5] text-xl hover:-translate-y-3 hover:rotate-6 hover:shadow-[0_0_35px_rgba(255,255,255,0.25)] transition-all duration-500"
+                  className="group w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl flex items-center justify-center text-black dark:text-[#f5f5f5] text-xl hover:-translate-y-3 hover:rotate-6 hover:shadow-[0_0_35px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_0_35px_rgba(255,255,255,0.25)] transition-all duration-500"
                 >
                   <FaGithub />
                 </a>
@@ -239,21 +237,16 @@ const Hero = () => {
                 >
                   <FaLinkedin />
                 </a>
-
-                {/* EMAIL */}
-                <a
-                  href="mailto:monalishaj975@gmail.com"
-                  className="group w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl flex items-center justify-center hover:-translate-y-3 hover:rotate-6 hover:shadow-[0_0_35px_rgba(234,67,53,0.4)] transition-all duration-500"
-                >
-                  <MdEmail className="text-[#EA4335] text-xl" />
-                </a>
               </div>
 
               {/* TOGGLE */}
               <div className="mt-10 w-full flex justify-center">
                 <div className="flex items-center p-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-2xl shadow-[0_0_35px_rgba(139,92,246,0.15)]">
                   <button
-                    onClick={() => setActiveTab("personal")}
+                    onClick={(e) => {
+                      setActiveTab("personal");
+                      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+                    }}
                     className={`px-5 sm:px-8 py-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-500 flex items-center gap-2 ${
                       activeTab === "personal"
                         ? "bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-500 text-white shadow-[0_0_30px_rgba(139,92,246,0.4)]"
@@ -265,7 +258,10 @@ const Hero = () => {
                   </button>
 
                   <button
-                    onClick={() => setActiveTab("professional")}
+                    onClick={(e) => {
+                      setActiveTab("professional");
+                      document.getElementById("education")?.scrollIntoView({ behavior: "smooth" });
+                    }}
                     className={`px-5 sm:px-8 py-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-500 flex items-center gap-2 ${
                       activeTab === "professional"
                         ? "bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-500 text-white shadow-[0_0_30px_rgba(139,92,246,0.4)]"

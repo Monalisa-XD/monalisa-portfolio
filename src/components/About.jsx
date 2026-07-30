@@ -39,7 +39,6 @@ const About = () => {
   return (
     <section
       className="relative overflow-hidden bg-[#020617] py-28 sm:py-36"
-      style={{ fontFamily: "'Syne', 'Inter', sans-serif" }}
     >
       {/* AURORA BACKGROUND */}
 <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -81,12 +80,11 @@ const About = () => {
   leading-none
   tracking-tight
   bg-gradient-to-r
-  from-blue-400
-  via-cyan-400
-  to-fuchsia-500
+  from-[#00D9FF]
+  to-[#7C6CFF]
   bg-clip-text
   text-transparent
-  drop-shadow-[0_0_35px_rgba(34,211,238,0.35)]
+  drop-shadow-[0_0_35px_rgba(0,217,255,0.35)]
   "
 >
   About Me
@@ -201,7 +199,7 @@ const About = () => {
         </div>
 
         {/* ── EDUCATION ── */}
-        <div className="relative overflow-hidden rounded-[32px] border border-white/[0.07] bg-white/[0.03] backdrop-blur-2xl p-8 sm:p-12 lg:p-16 mb-10">
+        <div id="education" className="scroll-mt-24 relative overflow-hidden rounded-[32px] border border-white/[0.07] bg-white/[0.03] backdrop-blur-2xl p-8 sm:p-12 lg:p-16 mb-10">
           <div className="absolute top-0 left-12 right-12 h-px bg-gradient-to-r from-transparent via-violet-400/40 to-transparent" />
 
           <div className="relative z-10">

@@ -9,20 +9,6 @@ import {
 const Experience = () => {
   const experiences = [
     {
-      role: "Application Developer Intern",
-      company: "CANNCO Tech Private Limited",
-      location: "Bhubaneswar, Odisha (Remote)",
-      duration: "January 2026 - April 2026",
-      badge: "Successfully Completed Internship",
-      points: [
-        "Developed a cross-platform mobile application using Flutter, implementing responsive UI and core app functionalities.",
-        "Built a dynamic React.js website with reusable components and modern frontend development practices.",
-        "Designed and implemented backend APIs, enabling seamless communication between frontend and server.",
-        "Collaborated with development teams to deliver scalable and user-friendly solutions.",
-        "Improved application performance and user experience through efficient coding practices.",
-      ],
-    },
-    {
       role: "Android Developer Intern",
       company: "Digital Nexus AI",
       location: "Bengaluru, Karnataka (Remote)",
@@ -34,6 +20,20 @@ const Experience = () => {
         "Built reusable widgets and responsive UI for Android and iOS.",
         "Collaborated with designers and backend developers to deliver production-ready features.",
         "Optimized app performance and fixed critical bugs for better user experience.",
+      ],
+    },
+    {
+      role: "Application Developer Intern",
+      company: "CANNCO Tech Private Limited",
+      location: "Bhubaneswar, Odisha (Remote)",
+      duration: "January 2026 - April 2026",
+      badge: "Successfully Completed Internship",
+      points: [
+        "Developed a cross-platform mobile application using Flutter, implementing responsive UI and core app functionalities.",
+        "Built a dynamic React.js website with reusable components and modern frontend development practices.",
+        "Designed and implemented backend APIs, enabling seamless communication between frontend and server.",
+        "Collaborated with development teams to deliver scalable and user-friendly solutions.",
+        "Improved application performance and user experience through efficient coding practices.",
       ],
     },
   ];
@@ -63,7 +63,7 @@ const Experience = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         {/* Heading */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-500 bg-clip-text text-transparent">
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black bg-gradient-to-r from-[#38BDF8] to-[#A855F7] bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(56,189,248,0.35)]">
             Professional Experience
           </h2>
 
@@ -71,7 +71,7 @@ const Experience = () => {
             Internship • Development • Real World Projects
           </p>
 
-          <div className="w-40 h-[5px] mx-auto mt-8 rounded-full bg-gradient-to-r from-cyan-400 via-violet-500 to-fuchsia-500 shadow-[0_0_30px_rgba(139,92,246,0.5)]" />
+          <div className="w-40 h-[5px] mx-auto mt-8 rounded-full bg-gradient-to-r from-[#38BDF8] to-[#A855F7] shadow-[0_0_30px_rgba(168,85,247,0.5)]" />
         </div>
 
         {/* Timeline */}

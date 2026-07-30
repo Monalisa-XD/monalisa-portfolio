@@ -76,11 +76,11 @@ const Projects = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
         {/* Heading */}
         <div className="mb-20">
-          <p className="text-[#00ffb3] uppercase tracking-[6px] text-sm mb-4">
+          <p className="text-[#FF7A18] uppercase tracking-[6px] text-sm mb-4">
             My Work
           </p>
 
-          <h2 className="text-5xl md:text-6xl font-black text-white">
+          <h2 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-[#FF7A18] to-[#FFD200] bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(255,122,24,0.35)]">
             Featured Projects
           </h2>
         </div>
@@ -90,13 +90,13 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-[#0B1224]/70 border border-white/10 rounded-[35px] p-8 backdrop-blur-xl hover:border-[#00ffb3]/30 transition-all duration-500 hover:-translate-y-2 shadow-[0_0_30px_rgba(0,255,179,0.05)]"
+              className="group bg-[#0B1224]/70 border border-white/10 rounded-[35px] p-8 backdrop-blur-xl hover:border-[#00F5FF]/30 transition-all duration-500 hover:-translate-y-2 shadow-[0_0_30px_rgba(0,245,255,0.05)]"
             >
               {/* Top Glow Line */}
-              <div className="w-20 h-1 bg-[#00ffb3] rounded-full mb-8 shadow-[0_0_15px_#00ffb3]" />
+              <div className="w-20 h-1 bg-gradient-to-r from-[#00F5FF] to-[#5B8CFF] rounded-full mb-8 shadow-[0_0_15px_#00F5FF]" />
 
               {/* Project Title */}
-              <h3 className="text-3xl font-bold text-white mb-5 group-hover:text-[#00ffb3] transition-all duration-300">
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-[#00F5FF] to-[#5B8CFF] bg-clip-text text-transparent mb-5 drop-shadow-[0_0_15px_rgba(0,245,255,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(0,245,255,0.5)] transition-all duration-300">
                 {project.title}
               </h3>
 
@@ -110,7 +110,7 @@ const Projects = () => {
                 {project.tech.map((item, i) => (
                   <span
                     key={i}
-                    className="px-4 py-2 rounded-full bg-[#050816] border border-white/10 text-gray-300 text-sm hover:border-[#00ffb3]/40 hover:text-[#00ffb3] transition-all duration-300"
+                    className="px-4 py-2 rounded-full bg-[#050816] border border-white/10 text-gray-300 text-sm hover:border-[#00F5FF]/40 hover:text-[#00F5FF] transition-all duration-300"
                   >
                     {item}
                   </span>
@@ -123,7 +123,7 @@ const Projects = () => {
       href={project.github}
       target="_blank"
       rel="noopener noreferrer"
-      className="px-6 py-3 rounded-full border border-[#00ffb3] text-[#00ffb3] font-semibold hover:bg-[#00ffb3] hover:text-black transition-all duration-300"
+      className="px-6 py-3 rounded-full border border-[#00F5FF] text-[#00F5FF] font-semibold hover:bg-gradient-to-r hover:from-[#00F5FF] hover:to-[#5B8CFF] hover:text-black transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,245,255,0.4)]"
     >
       GitHub
     </a>
@@ -134,7 +134,7 @@ const Projects = () => {
       href={project.colab}
       target="_blank"
       rel="noopener noreferrer"
-      className="px-6 py-3 rounded-full border border-blue-500 text-blue-400 font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
+      className="px-6 py-3 rounded-full border border-blue-500 text-blue-400 font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]"
     >
       Google Colab
     </a>

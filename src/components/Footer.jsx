@@ -2,7 +2,6 @@
 import {
   FaGithub,
   FaLinkedin,
-  FaInstagram,
   FaArrowUp,
   FaMapMarkerAlt,
   FaPhoneAlt,
@@ -31,6 +30,10 @@ const Footer = () => {
     {
       icon: <FaLinkedin />,
       link: "https://www.linkedin.com/in/monalisa--jena",
+    },
+    {
+      icon: <FaEnvelope />,
+      link: "mailto:monalishaj975@gmail.com",
     },
   ];
 
@@ -81,7 +84,7 @@ const Footer = () => {
 
               <div>
 
-                <h2 className="text-3xl font-black text-white">
+                <h2 className="text-3xl font-black bg-gradient-to-r from-[#00D4FF] to-[#8F6CFF] bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(0,212,255,0.3)]">
                   Monalisa Jena
                 </h2>
 
@@ -114,7 +117,7 @@ const Footer = () => {
           {/* CENTER */}
           <div>
 
-            <h3 className="text-2xl font-bold text-white mb-8">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-[#00D4FF] to-[#8F6CFF] bg-clip-text text-transparent mb-8 drop-shadow-[0_0_15px_rgba(0,212,255,0.3)]">
               Quick Links
             </h3>
 
@@ -141,7 +144,7 @@ const Footer = () => {
           {/* RIGHT */}
           <div>
 
-            <h3 className="text-2xl font-bold text-white mb-8">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-[#00D4FF] to-[#8F6CFF] bg-clip-text text-transparent mb-8 drop-shadow-[0_0_15px_rgba(0,212,255,0.3)]">
               Contact & Socials
             </h3>
 

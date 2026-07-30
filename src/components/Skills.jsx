@@ -106,11 +106,11 @@ const Skills = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         {/* Heading */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-500 bg-clip-text text-transparent">
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black bg-gradient-to-r from-[#00FFA8] to-[#00D4FF] bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(0,255,168,0.35)]">
             Technical Skills
           </h2>
 
-          <div className="w-40 h-[5px] mx-auto mt-8 rounded-full bg-gradient-to-r from-cyan-400 via-violet-500 to-fuchsia-500 shadow-[0_0_30px_rgba(139,92,246,0.5)]" />
+          <div className="w-40 h-[5px] mx-auto mt-8 rounded-full bg-gradient-to-r from-[#00FFA8] to-[#00D4FF] shadow-[0_0_30px_rgba(0,255,168,0.5)]" />
         </div>
 
         {/* Cards */}
@@ -118,10 +118,10 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-[35px] border border-white/10 bg-white/5 backdrop-blur-3xl p-8 hover:-translate-y-2 hover:border-cyan-400/30 hover:shadow-[0_20px_80px_rgba(139,92,246,0.25)] transition-all duration-500"
+              className="group relative overflow-hidden rounded-[35px] border border-white/10 bg-white/5 backdrop-blur-3xl p-8 hover:-translate-y-2 hover:border-[#00FFA8]/30 hover:shadow-[0_20px_80px_rgba(0,212,255,0.25)] transition-all duration-500"
             >
               {/* Glow Layer */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-cyan-500/10 via-violet-500/10 to-fuchsia-500/10 transition-all duration-500" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-[#00FFA8]/10 via-[#00D4FF]/10 to-cyan-500/10 transition-all duration-500" />
 
               <div className="relative z-10">
                 <h3 className="text-2xl font-black text-white mb-8 flex items-center gap-3">
