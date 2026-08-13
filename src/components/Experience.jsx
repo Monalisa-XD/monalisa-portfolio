@@ -9,10 +9,18 @@ import {
 const Experience = () => {
   const experiences = [
     {
+      role: "Customer Support Associate",
+      company: "Tech Mahindra",
+      location: "Bhubaneswar, Odisha (Onsite)",
+      duration: "August 2026 – Present",
+      badge: "Ongoing",
+      points: [],
+    },
+    {
       role: "Android Developer Intern",
       company: "Digital Nexus AI",
       location: "Bengaluru, Karnataka (Remote)",
-      duration: "May 2026 - Present",
+      duration: "May 2026 - August 2026",
       badge: "Currently Working",
       points: [
         "Developing scalable Flutter applications with clean architecture.",

@@ -1,13 +1,14 @@
 const Projects = () => {
   const projects = [
     {
-      title: "Portfolio",
-      description:
-         "Designed and developed a modern, responsive personal portfolio website to showcase projects, technical skills, certifications, and achievements. Built with React and Tailwind CSS, featuring a clean UI, smooth animations, and an intuitive user experience.",
+     
+  title: "Expense Tracker",
+  description:
+    "Designed and developed an advanced personal finance management application using Flutter, featuring expense and income tracking, category-based spending, accounts and transfers, budgets, analytics, recurring subscriptions, smart financial alerts, backup and restore, app security, privacy controls, and local-first API synchronization. Built with a scalable Clean Architecture and Riverpod state management for a responsive and reliable user experience.",
+  tech: ["Flutter", "Dart", "Riverpod", "REST API", "PostgreSQL", "Node.js"],
 
-      tech: ["React", "Tailwind", "JavaScript"],
 
-      github: "https://github.com/Monalisa-XD/monalisa-portfolio.git",
+      github: "https://github.com/Monalisa-XD/expense_tracker.git",
     },
 
     {

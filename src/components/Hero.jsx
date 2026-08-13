@@ -59,7 +59,6 @@ const Hero = () => {
             {/* LEFT SECTION */}
             <div className="w-full lg:w-[58%] text-center lg:text-left">
               {/* STATUS */}
-              {/* <div className="inline-flex items-center gap-3 px-4 py-3 rounded-full border border-emerald-400/20 bg-emerald-400/10 backdrop-blur-2xl shadow-[0_0_35px_rgba(16,185,129,0.15)] mb-7 hover:scale-105 transition-all duration-500"> */}
               <div className="inline-flex items-center gap-3 px-4 py-3 rounded-full bg-emerald-400/10 backdrop-blur-2xl shadow-[0_0_35px_rgba(16,185,129,0.15)] mb-7 hover:scale-105 transition-all duration-500">
                 <div className="relative">
                   <div className="w-3 h-3 rounded-full bg-emerald-400" />
@@ -68,7 +67,7 @@ const Hero = () => {
                 </div>
 
                 <p className="text-emerald-300 text-xs sm:text-sm md:text-base font-medium tracking-wide">
-                  Available for internships & full-time roles
+                  Available for new opportunities from November 1st 2026
                 </p>
               </div>
 
@@ -82,12 +81,7 @@ const Hero = () => {
 
               {/* DESCRIPTION */}
               <p className="mt-7 text-gray-300 text-sm sm:text-base md:text-lg leading-7 sm:leading-8 max-w-2xl mx-auto lg:mx-0">
-                Creative and passionate MCA graduate focused on building modern
-                Android and Full Stack applications with premium UI, smooth user
-                experience, and scalable solutions. Skilled in Java, Flutter,
-                React, JavaScript, SQL, and responsive web technologies with a
-                strong interest in innovative and futuristic digital
-                experiences.
+                MCA graduate with hands-on experience in Flutter development and a strong interest in Full Stack Development, Android development, and networking concepts. Passionate about building user-friendly applications and interested in connecting with customers to understand their needs and deliver effective solutions.
               </p>
 
               {/* ROLES */}
