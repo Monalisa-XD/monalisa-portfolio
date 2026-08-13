@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import profileImg from "../assets/profile.png.jpeg";
+import profileImg from "../assets/profile.jpeg";
 import resumePDF from "../assets/resume.pdf";
 
 import {

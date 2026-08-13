@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { HiBars3, HiXMark, HiMoon, HiSun } from "react-icons/hi2";
-import profileImage from "../assets/profile.png.jpeg";
+import profileImage from "../assets/profile.jpeg";
 import Resume from "../assets/resume.pdf";
 
 const Navbar = () => {
