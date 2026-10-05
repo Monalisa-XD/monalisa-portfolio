@@ -44,6 +44,8 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (status === "loading") return;
+
     const newErrors = validate();
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -52,33 +54,42 @@ const Contact = () => {
 
     setStatus("loading");
     try {
-      const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE";
-      
+      const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+      if (!accessKey) {
+        console.error(
+          "Web3Forms access key is missing. Set VITE_WEB3FORMS_ACCESS_KEY in your environment."
+        );
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 5000);
+        return;
+      }
+
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json"
+          Accept: "application/json",
         },
         body: JSON.stringify({
           access_key: accessKey,
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          subject: `New Portfolio Message from ${formData.name}`
-        })
+          subject: `New Portfolio Message from ${formData.name}`,
+        }),
       });
 
       const data = await response.json();
 
-      if (data.success) {
+      if (response.ok && data.success) {
         setStatus("success");
         setFormData({ name: "", email: "", message: "" });
       } else {
         setStatus("error");
       }
       setTimeout(() => setStatus("idle"), 5000);
-    } catch (err) {
+    } catch (error) {
+      console.error("Form submission error:", error);
       setStatus("error");
       setTimeout(() => setStatus("idle"), 5000);
     }
